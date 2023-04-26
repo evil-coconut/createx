@@ -1,0 +1,41 @@
+@import '../lang-currency/lang-currency.scss';
+@import '../menu-secondary/menu-secondary.scss';
+
+.top-header {
+    height: 44px;
+    background-color: $gray-900;
+    font-size: $FS-small;
+    color: $white;
+    &__content {
+        height: 44px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__text-number {}
+    &__menu-secondary {}
+    &__lang-currency {} 
+    &__account {
+        display: flex;
+        flex-direction: row;
+        p {
+            margin-right: 9px;
+        }
+    }
+    &__text-number_bold {
+        font-weight: 700;
+    }   
+    &__link {
+        color: $white;
+    }
+    &__text-number, &__account, &__menu{
+        opacity: 0.6;
+    }
+    ._container {
+        max-width: 1230px;
+        margin: 0 auto;
+    }
+}
+    

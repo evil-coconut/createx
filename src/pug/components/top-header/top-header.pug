@@ -1,0 +1,33 @@
+include ../menu-secondary/menu-secondary.pug
+
+.top-header
+    .top-header__content._container 
+        .top-header__text-number 
+            p Available 24/7 at 
+                span.top-header__text-number_bold (405) 555-0128
+        .top-header__menu-secondary
+            +menu-secondary([
+                {
+                    'title': 'Delivery & returns',
+                    'href': '#'
+                },
+                {
+                    'title': 'Track order',
+                    'href': '#'
+                },
+                {
+                    'title': 'Blog',
+                    'href': '#'
+                },
+                {
+                    'title': 'Contacts',
+                    'href': '#'
+                }
+            ])
+        .top-header__lang-currency 
+            include ../lang-currency/lang-currency.pug
+        .top-header__account
+            p.icon-person
+            a.top-header__link(href='#') Log in 
+            p / 
+            a.top-header__link(href='#')  Register
