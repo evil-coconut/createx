@@ -1,0 +1,44 @@
+.lang-currency {
+    position: relative;
+    width: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon-down_chevron {
+        margin-top: 3px;
+        display: block;  
+        opacity: 0.6;
+        font-size: 5px;
+    }
+    &__flag-usa {
+        margin-right: 12px;
+    }
+    &__flag-russia {
+        margin-right: 12px;
+    }
+    &__currency {
+        color: $white;
+        opacity: 0.6;
+        margin-right: 5px;
+    }
+    &__dropdown-content {
+        display: none;
+        position: absolute;
+        top: 16px;
+        right: 0;
+        width: 95px;
+        height: 30px;
+        background-color: $gray-900;
+        z-index: 1;
+        a {
+            color: $white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 7px 5px 5px 5px;
+        }
+    }
+}
+.lang-currency:hover .lang-currency__dropdown-content {
+    display: block;
+}
