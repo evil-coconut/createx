@@ -1,0 +1,14 @@
+.menu-secondary {
+    width: 364px;
+    &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item {}
+    &__link {
+        color: $white;
+        font-size: $FS-small;
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,6 @@
+mixin menu-secondary(arr)
+    .menu-secondary 
+        ul.menu-secondary__body 
+            each obj in arr
+                li.menu-secondary__item
+                    a.menu-secondary__link(href=obj.href)=obj.title
