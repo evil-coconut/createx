@@ -16,6 +16,12 @@
     }
     &__text-number {}
     &__menu-secondary {}
+    &__inner {
+        width: 274px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     &__lang-currency {} 
     &__account {
         display: flex;

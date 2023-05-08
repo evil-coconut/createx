@@ -24,10 +24,11 @@ include ../menu-secondary/menu-secondary.pug
                     'href': '#'
                 }
             ])
-        .top-header__lang-currency 
-            include ../lang-currency/lang-currency.pug
-        .top-header__account
-            p.icon-person
-            a.top-header__link(href='#') Log in 
-            p / 
-            a.top-header__link(href='#')  Register
+        .top-header__inner
+            .top-header__lang-currency 
+                include ../lang-currency/lang-currency.pug
+            .top-header__account
+                p.icon-person
+                a.top-header__link(href='#') Log in 
+                p / 
+                a.top-header__link(href='#')  Register
