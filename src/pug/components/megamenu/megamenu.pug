@@ -1,0 +1,35 @@
+include ../title/title.pug
+include ../button/button.pug
+
+- let clothes = [{'title': 'Coats', 'href': '#'}, {'title': 'Jackets', 'href': '#'}, {'title': 'Suits', 'href': '#'}, {'title': 'Dresses', 'href': '#'}, {'title': 'Cardigans & sweaters', 'href': '#'}, {'title': 'Sweatshirts & hoodies', 'href': '#'}, {'title': 'T-shirts & tops', 'href': '#'}, {'title': 'Pants', 'href': '#'}, {'title': 'Jeans', 'href': '#'}, {'title': 'Shorts', 'href': '#'}, {'title': 'Skirts', 'href': '#'}, {'title': 'Lingerie & nightwear', 'href': '#'}, {'title': 'Sportswear', 'href': '#'}, {'title': 'Swimwear', 'href': '#'}];
+- let shoes = [{'title': 'Boots', 'href': '#'}, {'title': 'Flat shoes', 'href': '#'}, {'title': 'Heels', 'href': '#'}, {'title': 'Sandals', 'href': '#'}, {'title': 'Mules', 'href': '#'}, {'title': 'Sliders', 'href': '#'}, {'title': 'Slippers', 'href': '#'}, {'title': 'Sneakers', 'href': '#'}, {'title': 'Leather', 'href': '#'}];
+- let accessories = [{'title': 'Bags & bagpacks', 'href': '#'}, {'title': 'Hats & scarves', 'href': '#'}, {'title': 'Hair accessories', 'href': '#'}, {'title': 'Belts', 'href': '#'}, {'title': 'Jewellery', 'href': '#'}, {'title': 'Watches', 'href': '#'}, {'title': 'Sunglasses', 'href': '#'}, {'title': 'Purses', 'href': '#'}, {'title': 'Gloves', 'href': '#'}, {'title': 'Socks & tights', 'href': '#'}]
+
+.megamenu
+    .megamenu__content
+        .megamenu__inner
+            .megamenu__categories
+                a.megamenu__link._megamenu-link-gray(href="#") New collection
+                a.megamenu__link._megamenu-link-gray(href="#") Best Sellers
+                a.megamenu__link._megamenu-link-gray(href="#") Plus Size
+                a.megamenu__link._megamenu-link-sale(href="#") Sale up to 70%
+            .megamenu__clothes
+                .megamenu__title
+                    +title({'title': 'CLOTHES'})
+                each obj in clothes
+                    a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
+            .megamenu__shoes 
+                .megamenu__title
+                    +title({'title': 'SHOES'})
+                each obj in shoes
+                    a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
+            .megamenu__accessories
+                .megamenu__title 
+                    +title({'title': 'ACCESSORIES'})
+                each obj in accessories
+                    a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
+        .megamenu__divider
+        .megamenu__banner
+            img(src=require('../../../img/menu-banner.png'), alt="menu-banner")
+            p Back to school. Sale up to 50%
+            +button({'title': 'See offers', 'href': '#', 'arrow': 'true'})

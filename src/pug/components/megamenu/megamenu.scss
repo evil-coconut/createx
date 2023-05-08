@@ -1,0 +1,72 @@
+@import '../title/title.scss';
+@import '../button/button.scss';
+
+.megamenu {
+    height: 487px;
+    background-color: $white;
+    box-sizing: border-box;
+    &__content {
+        width: 1230px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        padding: 20px 0 40px 0;
+        margin: 0 auto;
+    }
+    &__inner {
+        width: 810px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__categories {
+        width: 180px;
+        height: 108px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__clothes, &__shoes, &__accessories {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &__divider {
+        width: 1px;
+        height: 427px;
+        background: $divider-gradient;
+
+        margin: 0 68px 0 67px;
+    }
+    &__banner {
+        width: 285px;
+        display: flex;
+        flex-direction: column;
+        p {
+            color: $gray-800;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;
+            margin: 16px 0 16px 0;
+        }
+    }
+    &__title {
+        margin-bottom: 8px;
+    }
+    &__link {
+        font-size: $FS-small;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+    ._megamenu-link-gray {
+        color: $gray-800;
+    }
+    ._megamenu-link-sale {
+        color: $danger-color;
+    }
+}
