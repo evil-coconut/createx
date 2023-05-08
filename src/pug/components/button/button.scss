@@ -1,0 +1,27 @@
+.button {
+    width: 130px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &__content {
+        width: 90px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 36px;
+        color: $primary;
+        margin-right: 10px;
+    }
+    .icon-right_arrow {
+        color: $primary;
+        font-size: 10px;
+    }
+}
