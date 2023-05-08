@@ -1,0 +1,33 @@
+@import '../menu/menu.scss';
+@import '../megamenu/megamenu.scss';
+
+.header {
+    border: solid $gray-300;
+    border-width: 0 0 1px 0;
+    &__content {
+        height: 84px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+    &__logo {
+        margin-right: 60px;
+    }
+    &__menu {}
+    &__megamenu {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+    }
+    &__search {}
+    &__tool-bar {}
+    ._container {
+        max-width: 1230px;
+        margin: 0 auto;
+    }
+    ._active {
+        display: block;
+    }
+}
