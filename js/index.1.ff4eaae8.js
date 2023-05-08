@@ -1,0 +1,1 @@
+(()=>{let e=document.getElementById("menu-women"),n=document.getElementsByClassName("menu__women-link"),m=document.getElementsByClassName("header__megamenu");e.onclick=function(){m[0].classList.toggle("_active"),n[0].classList.toggle("_menu-link-primary")}})();
