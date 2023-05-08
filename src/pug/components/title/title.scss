@@ -1,0 +1,10 @@
+.title {
+    &__content {}
+    h3 {
+        font-size: $FS-small;
+        color: $gray-900;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1px;
+    }
+}
