@@ -16,7 +16,9 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet")
     link(rel="stylesheet", href=require('../../sass/iconsfont.scss'))
     link(rel="stylesheet", href=require('../components/top-header/top-header.scss'))
+    link(rel="stylesheet", href=require('../components/header/header.scss'))
     link(rel="stylesheet", href=require('../pages/' + linkStyle))
   body 
     include ../components/top-header/top-header.pug
+    include ../components/header/header.pug
     block content 

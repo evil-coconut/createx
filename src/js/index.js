@@ -1,10 +1,8 @@
-function importAll(resolve) {
-    resolve.keys().forEach(resolve);
+let menuWomenLink = document.getElementById('menu-women');
+let menuWomenLinkBody = document.getElementsByClassName('menu__women-link')
+let megamenu = document.getElementsByClassName('header__megamenu');
+
+menuWomenLink.onclick = function() {
+    megamenu[0].classList.toggle("_active");
+    menuWomenLinkBody[0].classList.toggle("_menu-link-primary");
 }
-importAll(require.context('../img', true, /\.(jpg|png|svg|png)$/));
-
-//importAll(require.context('../sass', true, /\.(css|scss)$/));
-importAll(require.context('../pug', true, /\.(css|scss|jpg|png|svg|png|ico|xml|mp4|)$/));
-
-importAll(require.context('./', true, /\.(js)$/));
-importAll(require.context('../pug', true, /\.(js)$/));
