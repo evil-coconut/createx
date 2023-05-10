@@ -1,5 +1,6 @@
 @import '../menu/menu.scss';
 @import '../megamenu/megamenu.scss';
+@import '../search/search.scss';
 
 .header {
     border: solid $gray-300;
@@ -21,7 +22,11 @@
         top: 85px;
         left: 0;
     }
-    &__search {}
+    &__search {
+        width: 380px;
+        height: 44px;
+        margin-left: 132px;
+    }
     &__tool-bar {}
     ._container {
         max-width: 1230px;
