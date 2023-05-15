@@ -1,0 +1,45 @@
+.tool-bar {
+    width: 131px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__wishlist {
+        width: 38px;
+        a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+    }
+    &__wishlist-number {
+        color: $gray-800;
+        font-size: $FS-base;
+    }
+    &__divider {
+        width: 1px;
+        height: 22px;
+        background: $divider-gradient;
+    }
+    &__cart {
+        width: 53px;
+        a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+    }
+    &__cart-number {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 23px;
+        height: 20px;
+        border-radius: 4px;
+        color: $white;
+        font-size: $FS-extrasmall;
+        font-weight: 900;
+        background-color: $success-color;
+        margin-top: 1px;
+    }
+}
