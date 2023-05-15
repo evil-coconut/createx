@@ -1,6 +1,7 @@
 @import '../menu/menu.scss';
 @import '../megamenu/megamenu.scss';
 @import '../search/search.scss';
+@import '../tool-bar/tool-bar.scss';
 
 .header {
     border: solid $gray-300;
@@ -27,7 +28,9 @@
         height: 44px;
         margin-left: 132px;
     }
-    &__tool-bar {}
+    &__tool-bar {
+        margin-left: 48px;
+    }
     ._container {
         max-width: 1230px;
         margin: 0 auto;
