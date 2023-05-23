@@ -17,8 +17,10 @@ html(lang="en")
     link(rel="stylesheet", href=require('../../sass/iconsfont.scss'))
     link(rel="stylesheet", href=require('../components/top-header/top-header.scss'))
     link(rel="stylesheet", href=require('../components/header/header.scss'))
+    link(rel="stylesheet", href=require('../components/special-offers/special-offers.scss'))
     link(rel="stylesheet", href=require('../pages/' + linkStyle))
   body 
     include ../components/top-header/top-header.pug
     include ../components/header/header.pug
+    include ../components/special-offers/special-offers.pug
     block content 
