@@ -1,0 +1,47 @@
+include ../button/button.pug
+
+.hero-slide     
+    .hero-slide__list
+        .hero-slide__body.hero-slide__slide-1
+            .hero-slide__item
+                .hero-slide__item-top_title 
+                    p New collection
+                .hero-slide__item-title 
+                    p Menswear 2020
+                .hero-slide__item-inner
+                    .hero-slide__item-button_empty
+                        +button({
+                            'title': 'Shop sale',
+                            'href': '#',
+                            'style': 'empty',
+                        })
+                    .hero-slide__item-button_fill
+                        +button({
+                            'title': 'Shop the menswear',
+                            'href': '#',
+                            'style': 'fill',
+                        })
+        .hero-slide__body.hero-slide__slide-2
+            .hero-slide__item
+                .hero-slide__item-top_title 
+                    p Deal of the week
+                .hero-slide__item-title 
+                    p Stay Warm With Our New Sweaters
+                .hero-slide__item-inner
+                    .hero-slide__item-button_empty
+                        +button({
+                            'title': 'Shop now',
+                            'href': '#',
+                            'style': 'empty',
+                        })
+    .hero-slide__dots
+        .hero-slide__dots-item
+            p 01
+        .hero-slide__dots-item
+            p 02
+        .hero-slide__dots-item
+            p 03
+        .hero-slide__dots-item
+            p 04
+    button#hero-slide__button-prev.hero-slide__button.icon-left_arrow
+    button#hero-slide__button-next.hero-slide__button.icon-right_arrow
