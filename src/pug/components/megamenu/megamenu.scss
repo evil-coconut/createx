@@ -46,13 +46,17 @@
         width: 285px;
         display: flex;
         flex-direction: column;
-        p {
-            color: $gray-800;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 150%;
-            margin: 16px 0 16px 0;
-        }
+    }
+    &__banner-text {
+        color: $gray-800;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        margin: 16px 0 16px 0;
+    }
+    &__banner-button {
+        width: 130px;
+        height: 36px;
     }
     &__title {
         margin-bottom: 8px;

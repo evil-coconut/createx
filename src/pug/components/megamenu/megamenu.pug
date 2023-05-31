@@ -31,5 +31,6 @@ include ../button/button.pug
         .megamenu__divider
         .megamenu__banner
             img(src=require('../../../img/menu-banner.png'), alt="menu-banner")
-            p Back to school. Sale up to 50%
-            +button({'title': 'See offers', 'href': '#', 'arrow': 'true'})
+            p.megamenu__banner-text Back to school. Sale up to 50%
+            .megamenu__banner-button
+                +button({'title': 'See offers', 'href': '#', 'style': 'arrow', 'arrow': 'true'})
