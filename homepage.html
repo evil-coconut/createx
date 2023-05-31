@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/iconsfont.aed71c9f.css">
-    <link rel="stylesheet" href="css/top-header.ca91ef15.css">
-    <link rel="stylesheet" href="css/header.e065da77.css">
-    <link rel="stylesheet" href="css/homepage.e884d295.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Ubuntu:wght@700&amp;display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/iconsfont.aa671560.css">
+    <link rel="stylesheet" href="css/top-header.e5f54fe9.css">
+    <link rel="stylesheet" href="css/header.d564a14f.css">
+    <link rel="stylesheet" href="css/special-offers.a50952c7.css">
+    <link rel="stylesheet" href="css/homepage.a30d44d4.css">
   </head>
   <body>
     <div class="top-header">
@@ -290,20 +293,113 @@
               </div>
               <div class="megamenu__divider"></div>
               <div class="megamenu__banner"><img src="img/menu-banner.png" alt="menu-banner">
-                <p>Back to school. Sale up to 50%</p>
-                <div class="button">
-                  <div class="button__content"><a class="button__link" href="#">See offers</a>
-                    <p class="icon-right_arrow"></p>
+                <p class="megamenu__banner-text">Back to school. Sale up to 50%</p>
+                <div class="megamenu__banner-button">
+                  <div class="button button__arrow"><a class="button__link" href="#">See offers</a>
+                    <p class="button__icon-arrow icon-right_arrow"> </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header__search"> </div>
-        <div class="header__tool-bar"></div>
+        <div class="header__search">
+          <div class="search"> <input class="search__input" type="text" name="search"
+              placeholder="Search for products..."></div>
+        </div>
+        <div class="header__tool-bar">
+          <div class="tool-bar">
+            <div class="tool-bar__wishlist"><a class="icon-heart" href="#">
+                <p class="tool-bar__wishlist-number">2</p>
+              </a></div>
+            <div class="tool-bar__divider"> </div>
+            <div class="tool-bar__cart"> <a class="icon-shopping_cart" href="#">
+                <p class="tool-bar__cart-number">4</p>
+              </a></div>
+          </div>
+        </div>
       </div>
     </header>
-    <script src="js/index.1.ff4eaae8.js"> </script>
+    <div class="special-offers">
+      <div class="special-offers__wrapper"><button class="special-offers__left-chevron icon-left_chevron"
+          id="special-offers__prev"></button>
+        <div class="special-offers__list">
+          <ul class="special-offers__list-body">
+            <li class="special-offers__list-item">
+              <div class="special-offers__item-content">
+                <div class="special-offers__text">
+                  <p>Up to 70% Off.</p>
+                </div>
+                <div class="special-offers__link"> <a href="#">Shop our latest sale styles </a></div>
+              </div>
+            </li>
+            <li class="special-offers__list-item">
+              <div class="special-offers__item-content">
+                <div class="special-offers__text">
+                  <p> Two slides.</p>
+                </div>
+                <div class="special-offers__link"> <a href="#">Shop our latest sale styles </a></div>
+              </div>
+            </li>
+          </ul>
+        </div><button class="special-offers__right-chevron icon-right_chevron" id="special-offers__next"></button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="hero-slide">
+        <div class="hero-slide__list">
+          <div class="hero-slide__body hero-slide__slide-1">
+            <div class="hero-slide__item">
+              <div class="hero-slide__item-top_title">
+                <p>New collection</p>
+              </div>
+              <div class="hero-slide__item-title">
+                <p>Menswear 2020</p>
+              </div>
+              <div class="hero-slide__item-inner">
+                <div class="hero-slide__item-button_empty">
+                  <div class="button button__empty"><a class="button__link" href="#">Shop sale</a></div>
+                </div>
+                <div class="hero-slide__item-button_fill">
+                  <div class="button button__fill"><a class="button__link" href="#">Shop the menswear</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide__body hero-slide__slide-2">
+            <div class="hero-slide__item">
+              <div class="hero-slide__item-top_title">
+                <p>Deal of the week</p>
+              </div>
+              <div class="hero-slide__item-title">
+                <p>Stay Warm With Our New Sweaters</p>
+              </div>
+              <div class="hero-slide__item-inner">
+                <div class="hero-slide__item-button_empty">
+                  <div class="button button__empty"><a class="button__link" href="#">Shop now</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide__dots">
+          <div class="hero-slide__dots-item">
+            <p>01</p>
+          </div>
+          <div class="hero-slide__dots-item">
+            <p>02</p>
+          </div>
+          <div class="hero-slide__dots-item">
+            <p>03</p>
+          </div>
+          <div class="hero-slide__dots-item">
+            <p>04</p>
+          </div>
+        </div><button class="hero-slide__button icon-left_arrow" id="hero-slide__button-prev"></button><button
+          class="hero-slide__button icon-right_arrow" id="hero-slide__button-next"></button>
+      </div>
+    </div>
+    <script src="js/hero-slide.51b5bf93.js"> </script>
+    <script src="js/index.1.67567f17.js"> </script>
   </body>
 </html>
