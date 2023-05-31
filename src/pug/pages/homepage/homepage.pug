@@ -6,4 +6,6 @@ block variables
     - var linkStyle = './homepage/homepage.scss'
 
 block content 
-    script(src=require("../../../js/index.js"))  
+    .wrapper 
+        include ../../components/hero-slide/hero-slide.pug
+    script(src=require("../../components/hero-slide/hero-slide.js"))  
