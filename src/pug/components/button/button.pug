@@ -1,5 +1,6 @@
 mixin button(obj)
-    .button 
-        .button__content
-            a.button__link(href=obj.href)=obj.title 
-            p.icon-right_arrow
+    -var classStyle = 'button__' + obj.style
+    div(class="button "+classStyle)
+        a.button__link(href=obj.href)=obj.title 
+        if obj.arrow 
+            p.button__icon-arrow.icon-right_arrow   
