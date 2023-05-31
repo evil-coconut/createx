@@ -13,7 +13,7 @@ html(lang="en")
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Ubuntu:wght@700&display=swap" rel="stylesheet")
     link(rel="stylesheet", href=require('../../sass/iconsfont.scss'))
     link(rel="stylesheet", href=require('../components/top-header/top-header.scss'))
     link(rel="stylesheet", href=require('../components/header/header.scss'))
@@ -24,3 +24,4 @@ html(lang="en")
     include ../components/header/header.pug
     include ../components/special-offers/special-offers.pug
     block content 
+    script(src=require("../../js/index.js")) 
