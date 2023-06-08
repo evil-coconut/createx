@@ -5,7 +5,34 @@ block variables
     - var keywords = 'Homepage Createx'
     - var linkStyle = './homepage/homepage.scss'
 
+include ../../components/img-link/img-link.pug
+
 block content 
     .wrapper 
-        include ../../components/hero-slide/hero-slide.pug
+        section.block-1
+            .block-1__hero-slide
+                include ../../components/hero-slide/hero-slide.pug
+            .block-1__top-categories
+                +img-link({
+                    'img': '../../../img/women.png',
+                    'href': '#',
+                    'title': 'Women’s'
+                })
+                +img-link({
+                    'img': '../../../img/men.png',
+                    'href': '#',
+                    'title': 'Men’s'
+                })
+                +img-link({
+                    'img': '../../../img/kid.png',
+                    'href': '#',
+                    'title': 'Kids’'
+                })
+        section.new-arrivals 
+            h1.new-arrivals__title New arrivals 
+            p.new-arrivals__text Check out our latest arrivals for the upcoming season
+            a.new-arrivals__link(href='#') See the collection here
+            .new-arrivals__carousel
+                include ../../components/carousel-arrivals/carousel-arrivals.pug
     script(src=require("../../components/hero-slide/hero-slide.js"))  
+    script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 

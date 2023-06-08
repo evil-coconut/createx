@@ -1,5 +1,48 @@
 @import '../../components/hero-slide/hero-slide.scss';
+@import '../../components/img-link/img-link.scss';
+@import '../../components/carousel-arrivals/carousel-arrivals.scss';
 
 body {
     font-family: $mainFont;
+}
+
+.block-1 {
+    position: relative;
+    margin: 0 0 556px 0;
+    &__hero-slide {}
+    &__top-categories {
+        position: absolute;
+        top: 740px;
+        left: 345px;
+        width: 1230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.new-arrivals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        color: $gray-900;
+        font-size: 46px;
+        font-weight: 900;
+        line-height: 130%;
+    }
+    &__text {
+        font-size: $FS-large;
+        line-height: 150%;
+        margin: 24px 0 0 0;
+    }
+    &__link {
+        color: $primary;
+        font-size: $FS-large;
+        text-decoration: underline;
+    }
+    &__carousel {
+        margin: 60px 0 180px 0;
+    }
 }
