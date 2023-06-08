@@ -1,0 +1,37 @@
+@import '../card-arrivals/card-arrivals.scss';
+
+.carousel-arrivals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__list {
+        width: 1900px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        scroll-snap-type: both mandatory;
+        column-gap: 30px;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    &__dot {
+        width: 240px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 91px 0 0 0;
+    }
+    &__dot-item {
+        width: 30px;
+        height: 2px;
+        background-color: $gray-500;
+        border-radius: 3px;
+    }
+    &__dot-item_active {
+        background-color: $gray-800;
+    }
+}
+.carousel-arrivals-active {
+    scroll-snap-type: unset;
+}
