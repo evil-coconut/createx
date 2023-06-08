@@ -1,0 +1,12 @@
+.img-link {
+    &__link {}
+    &__img {
+        margin: 0 0 16px 0;
+    }
+    &__title {
+        color: $gray-800;
+        font-size: $FS-lead;
+        line-height: 150%;
+        text-align: center;
+    }
+}

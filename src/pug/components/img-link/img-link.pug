@@ -1,0 +1,5 @@
+mixin img-link(obj)
+    .img-link 
+        a.img-link__link(href=obj.href)
+            img.img-link__img(src=require(obj.img) alt=obj.title)
+            p.img-link__title=obj.title
