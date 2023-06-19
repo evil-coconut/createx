@@ -6,13 +6,14 @@ block variables
     - var linkStyle = './homepage/homepage.scss'
 
 include ../../components/img-link/img-link.pug
+include ../../components/banner/banner.pug
 
 block content 
-    .wrapper 
-        section.block-1
-            .block-1__hero-slide
+    main.wrapper 
+        section.main-slide
+            .main-slide__hero-slide
                 include ../../components/hero-slide/hero-slide.pug
-            .block-1__top-categories
+            .main-slide__top-categories
                 +img-link({
                     'img': '../../../img/women.png',
                     'href': '#',
@@ -34,5 +35,32 @@ block content
             a.new-arrivals__link(href='#') See the collection here
             .new-arrivals__carousel
                 include ../../components/carousel-arrivals/carousel-arrivals.pug
+        section.banners
+            +banner({
+                'topTitle': 'Summer Collections',
+                'title': 'Sale Up to 70%',
+                'button': 'Explore new prices',
+                'img': 'banner-1'
+            })
+            +banner({
+                'topTitle': 'Deal of the week',
+                'title': 'Stay Warm With Our New Sweaters',
+                'button': 'Shop now',
+                'img': 'banner-2',
+                'limited': '2023-06-30T15:00'
+            })
+            +banner({
+                'topTitle': 'New collection',
+                'title': 'Shoes & Bags autumn / winter 2020',
+                'button': 'See offers',
+                'arrow': 'true',
+                'img': 'banner-3'
+            })
+            +banner({
+                'topTitle': 'For All new Email Subscribers',
+                'title': 'Get 5% Off & Free Delivery',
+                'input': 'true'
+            })
     script(src=require("../../components/hero-slide/hero-slide.js"))  
     script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 
+    script(src=require("../../components/banner/banner.js")) 

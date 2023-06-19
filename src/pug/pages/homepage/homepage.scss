@@ -1,19 +1,21 @@
 @import '../../components/hero-slide/hero-slide.scss';
 @import '../../components/img-link/img-link.scss';
 @import '../../components/carousel-arrivals/carousel-arrivals.scss';
+@import '../../components/banner/banner.scss';
 
 body {
     font-family: $mainFont;
 }
 
-.block-1 {
+.main-slide {
+    max-width: 1920px;
     position: relative;
-    margin: 0 0 556px 0;
+    margin: auto auto 556px auto;
     &__hero-slide {}
     &__top-categories {
         position: absolute;
         top: 740px;
-        left: 345px;
+        left: 17%;
         width: 1230px;
         display: flex;
         flex-direction: row;
@@ -45,4 +47,12 @@ body {
     &__carousel {
         margin: 60px 0 180px 0;
     }
+}
+
+.banners {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
 }
