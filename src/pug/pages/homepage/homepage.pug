@@ -5,6 +5,7 @@ block variables
     - var keywords = 'Homepage Createx'
     - var linkStyle = './homepage/homepage.scss'
 
+include ../../components/title/title.pug
 include ../../components/img-link/img-link.pug
 include ../../components/banner/banner.pug
 
@@ -30,7 +31,7 @@ block content
                     'title': 'Kids’'
                 })
         section.new-arrivals 
-            h1.new-arrivals__title New arrivals 
+            +title('New arrivals')
             p.new-arrivals__text Check out our latest arrivals for the upcoming season
             a.new-arrivals__link(href='#') See the collection here
             .new-arrivals__carousel
@@ -61,6 +62,45 @@ block content
                 'title': 'Get 5% Off & Free Delivery',
                 'input': 'true'
             })
+        section.popular-categories
+            +title('Popular categories')
+            .popular-categories__list 
+                +img-link({
+                    'img': '../../../img/pc-tops.png',
+                    'href': '#',
+                    'title': 'Tops',
+                    'circle': 'true'
+                })
+                +img-link({
+                    'img': '../../../img/pc-tshirts.png',
+                    'href': '#',
+                    'title': 'T-shirts',
+                    'circle': 'true'
+                })
+                +img-link({
+                    'img': '../../../img/pc-caps.png',
+                    'href': '#',
+                    'title': 'Caps',
+                    'circle': 'true'
+                })
+                +img-link({
+                    'img': '../../../img/pc-sandals.png',
+                    'href': '#',
+                    'title': 'Sandals',
+                    'circle': 'true'
+                })
+                +img-link({
+                    'img': '../../../img/pc-jackets.png',
+                    'href': '#',
+                    'title': 'Jackets',
+                    'circle': 'true'
+                })
+                +img-link({
+                    'img': '../../../img/pc-coats.png',
+                    'href': '#',
+                    'title': 'Coats',
+                    'circle': 'true'
+                })
     script(src=require("../../components/hero-slide/hero-slide.js"))  
     script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 
     script(src=require("../../components/banner/banner.js")) 
