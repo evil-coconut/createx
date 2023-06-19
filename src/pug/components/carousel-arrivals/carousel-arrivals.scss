@@ -13,6 +13,10 @@
         column-gap: 30px;
         overflow: hidden;
         padding: 0 20px;
+        @media (min-width: 1615px) and (max-width: 1899px) {width: 1615px; padding: 0 40px;}
+        @media (min-width: 1330px) and (max-width: 1614px) {width: 1330px; padding: 0 70px;}
+        @media (min-width: 1045px) and (max-width: 1329px) {width: 1045px; padding: 0 100px;}
+    
     }
     &__dot {
         width: 240px;
