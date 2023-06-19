@@ -1,0 +1,51 @@
+include ../button/button.pug
+
+mixin banner(obj)
+    .banner
+        if obj.input
+            .banner__inner-input
+                .banner__top-title=obj.topTitle
+                .banner__title=obj.title 
+                .banner__input 
+                    p.banner__input-text Email
+                    .banner__input-row
+                        input.banner__input-email(type="email" placeholder='Your working email')
+                        button.banner__input-button(type="submit") Subscribe
+                .banner__input-text *Sign up to be the first to hear about exclusive deals, special offers and upcoming collections.
+        else
+            .banner__img 
+                img(src=require(`../../../img/${obj.img}.png`))
+            .banner__inner
+                .banner__top-title=obj.topTitle
+                .banner__title=obj.title 
+                .banner__button 
+                    if obj.arrow
+                        +button({
+                            'title': obj.button,
+                            'href': '#',
+                            'style': 'arrow',
+                            'arrow': 'true'
+                        })
+                    else 
+                        +button({
+                            'title': obj.button,
+                            'href': '#',
+                            'style': 'empty'
+                        })
+                if(obj.limited)
+                    .banner__limited 
+                        .banner__limited-text Limited time offer
+                        .banner__limited-countdown
+                            #limited-countdown=obj.limited
+                            .banner__limited-countdown-item
+                                .banner__limited-countdown_days .
+                                .banner__limited-countdown-text Days
+                            .banner__limited-countdown-item
+                                .banner__limited-countdown_hours .
+                                .banner__limited-countdown-text Hours
+                            .banner__limited-countdown-item 
+                                .banner__limited-countdown_mins .
+                                .banner__limited-countdown-text Mins
+                            .banner__limited-countdown-item
+                                .banner__limited-countdown_sec .
+                                .banner__limited-countdown-text Sec

@@ -1,0 +1,114 @@
+@import '../button/button.scss';
+
+.banner {
+    position: relative;
+    &__img {}
+    &__inner {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__top-title {
+        color: $gray-900;
+        font-weight: 700;
+        font-size: $FS-small;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+    &__title {
+        width: 362px;
+        color: $gray-900;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 130%;
+        margin: 12px 0 40px 0;
+    }
+    &__button {
+        height: 44px;
+    }
+    &__inner-input {
+        width: 735px;
+        height: 500px;
+        background: url('../../../img/banner-4.png') no-repeat bottom right, $gray-300;
+        border-radius: 4px;
+        padding: 60px;
+    }
+    &__input-text {
+        color: $gray-800;
+        font-size: $FS-small;
+        font-weight: 400;
+        margin: 0 0 8px 0;
+    }
+    &__input {
+        margin: 0 0 20px 0;
+    }
+    &__input-row {
+        display: flex;
+        flex-direction: row;
+    }
+    &__input-email {
+        width: 230px;
+        height: 44px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px 0px 0px 4px;
+    }
+    &__input-button {
+        cursor: pointer;
+        background-color: $primary;
+        border-radius: 0px 4px 4px 0px;
+        color: $white;
+        font-weight: 700;
+        font-size: $FS-small;
+        text-align: center;
+        width: 130px;
+        height: 44px;
+        border: none;
+    }
+    &__input-text {
+        width: 360px;
+        color: $gray-800;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $FS-small;
+    }
+    &__input-row input::placeholder {
+        color: $gray-600;
+        font-family: $mainFont;
+        font-size: $FS-small;
+        padding: 11px 0 12px 16px;
+    }
+    &__limited {
+        margin: 79px 0 0 0;
+    }
+    &__limited-text {
+        color: $gray-900;
+        font-size: $FS-small;
+        text-transform: uppercase;
+        margin: 0 0 12px 0;
+    } 
+    &__limited-countdown {
+        width: 209px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__limited-countdown_days, &__limited-countdown_hours, &__limited-countdown_mins, &__limited-countdown_sec {
+        color: $gray-900;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    &__limited-countdown-item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 4px 0;
+    }
+    &__limited-countdown-text {
+        color: $gray-900;
+        font-size: $FS-small;
+    }
+    #limited-countdown {
+        display: none;
+    }
+}
