@@ -1,5 +1,8 @@
 mixin img-link(obj)
+    if obj.circle
+        -let imgLinkClassImg='_circle';
+        -let imgLinkClassTitle='_gray900';
     .img-link 
-        a.img-link__link(href=obj.href)
+        a(class=`img-link__link ${imgLinkClassImg}` href=obj.href)
             img.img-link__img(src=require(obj.img) alt=obj.title)
-            p.img-link__title=obj.title
+            p(class=`img-link__title ${imgLinkClassTitle}`)=obj.title
