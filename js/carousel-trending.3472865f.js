@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".carousel-trending__button-next"),t=document.querySelector(".carousel-trending__button-prev"),n=document.querySelector(".carousel-trending__carousel-list");let c=0;e.addEventListener("click",(function(){c+=1260,c>2520&&(c=0),n.style.left=-c+"px"})),t.addEventListener("click",(function(){c-=1260,c<0&&(c=2520),n.style.left=-c+"px"}))})();
