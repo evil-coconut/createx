@@ -1,0 +1,43 @@
+mixin card-product(obj)
+    .card-product
+        .card-product__inner
+            div(class=`card-product__img_${obj.style}`)
+                img(src=require(obj.img))
+            if obj.discount
+                .card-product__discount -#{obj.discount}%
+            if obj.rating
+                .card-product__rating 
+                    -for(let i = 0; i < 5; i++)
+                        if(obj.rating > i)
+                            p.card-product__star-fill.icon-star_fill
+                        else
+                            p.card-product__star.icon-star
+            .card-product__chevron
+                button(class=`icon-left_chevron card-product__left-chevron_${obj.style}`)
+                button(class=`icon-right_chevron card-product__right-chevron_${obj.style}`)
+            .card-product__wishlist
+                button.card-product__wishlist-button.icon-heart
+        .card-product__inner-bottom
+            .card-product__title=obj.title
+            if obj.discount 
+                .card-product__price-inner
+                    .card-product__price.card-product__price_sale=obj.price 
+                    .card-product__old-price $#{obj.oldPrice}
+            else 
+                .card-product__price $#{obj.price}
+            if obj.color || obj.sizes
+                div(class=`card-product__hidden-block_${obj.style}`) 
+                    .card-product__hidden-block_inner
+                        if obj.sizes
+                            .card-product__size 
+                                each val in obj.sizes
+                                    .card-product__size-item=val
+                        if obj.color 
+                            .card-product__color
+                                each b in obj.color
+                                    .card-product__color-item
+                                        div(class='card-product__color-item_'+b style=`background-color: ${b}`)
+                    button.card-product__button.icon-shopping_cart Add to cart
+            else 
+                div(class=`card-product__hidden-block_${obj.style}`)
+                    button.card-product__button.icon-shopping_cart Add to cart
