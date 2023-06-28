@@ -9,8 +9,7 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    index: './src/pug/index.pug',
-    homepage: './src/pug/pages/homepage/homepage.pug'
+    index: './src/pug/pages/index/index.pug'
   },
   output: {
     path: PATHS.dist,
