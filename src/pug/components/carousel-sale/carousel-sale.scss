@@ -1,0 +1,40 @@
+@import '../card-product/card-product.scss';
+
+.carousel-sale {
+    position: relative;
+    &__carousel {
+        width: 1230px;
+        height: 710px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    &__carousel-list {
+        width: 3750px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 30px;
+        position: relative;
+        left: 0;
+        transition: all ease 1s;
+    }
+    &__button {
+        position: absolute;
+        top: -100px;
+        right: 333px;
+        display: flex;
+        flex-direction: row;
+    }
+    &__button-next, &__button-prev {
+        width: 48px;
+        height: 48px;
+        color: $gray-800;
+        font-size: 15px;
+        background-color: #ffffff00;
+        border: none;
+    }
+    &__button-inner:hover &__button-next, &__button-inner:hover &__button-prev {
+        color: $white;
+        background-color: $primary;
+        border-radius: 50%;
+    }
+}
