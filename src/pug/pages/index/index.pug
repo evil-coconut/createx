@@ -113,8 +113,31 @@ block content
                     'href': '#',
                     'style': 'empty',
                 })
+        section.sale
+            .sale__title
+                +title('Sale up to 70%')
+            .sale__carousel
+                include ../../components/carousel-sale/carousel-sale.pug 
+            .sale__link 
+                +button({
+                    'title': 'See all sale products',
+                    'href': '#',
+                    'style': 'empty',
+                })
+        section.mobile-app 
+            .mobile-app__block-white
+            .mobile-app__img 
+                img(src=require("../../../img/mobile-app.svg"), alt="")
+            .mobile-app__inner
+                .mobile-app__title Enjoy mobile shopping with our Createx Store App!
+                .mobile-app__button 
+                    a.mobile-app__app-store(href="#")
+                        img(src=require("../../../img/app-store.svg"), alt="")
+                    a.mobile-app__google-play(href="#")  
+                        img(src=require("../../../img/google-play.svg"), alt="")
     script(src=require("../../components/hero-slide/hero-slide.js"))  
     script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 
     script(src=require("../../components/banner/banner.js")) 
     script(src=require("../../components/carousel-trending/carousel-trending.js"))  
+    script(src=require("../../components/carousel-sale/carousel-sale.js")) 
     script(src=require("../../components/card-product/card-product.js"))
