@@ -1,0 +1,5 @@
+mixin icon-box(obj)
+    .icon-box 
+        img.icon-box__img(src=require(`../../../img/${obj.img}`))
+        .icon-box__title=obj.title
+        .icon-box__text=obj.text
