@@ -5,6 +5,8 @@
 @import '../../components/banner/banner.scss';
 @import '../../components/carousel-trending/carousel-trending.scss';
 @import '../../components/carousel-sale/carousel-sale.scss';
+@import '../../components/icon-box/icon-box.scss';
+@import '../../components/blog-card/blog-card.scss';
 
 body {
     font-family: $mainFont;
@@ -152,4 +154,83 @@ body {
         margin-right: 24px;
     }
     &__google-play {}
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 45px;
+    margin: 120px 0 180px 0;
+    &__divider {
+        width: 1px;
+        height: 136px;
+        background: $divider-gradient;
+    }
+}
+
+.insta-block {
+    max-width: 1230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner_top-title {
+        color: $gray-900;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__inner_title {
+        color: $gray-900;
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        margin: 8px 0 60px 0;
+    }
+    &__inner_link {
+        height: 52px;
+    }
+    &__img {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+.fashion-block {
+    max-width: 1230px;
+    margin: 180px auto 0 auto;
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 0 60px 0;
+    }
+    &__inner_title {}
+    &__inner_link {
+        height: 44px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+.brands {
+    max-width: 1230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px auto;
 }

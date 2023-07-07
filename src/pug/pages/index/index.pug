@@ -9,6 +9,8 @@ include ../../components/title/title.pug
 include ../../components/button/button.pug
 include ../../components/img-link/img-link.pug
 include ../../components/banner/banner.pug
+include ../../components/icon-box/icon-box.pug
+include ../../components/blog-card/blog-card.pug
 
 block content 
     main.wrapper 
@@ -135,6 +137,80 @@ block content
                         img(src=require("../../../img/app-store.svg"), alt="")
                     a.mobile-app__google-play(href="#")  
                         img(src=require("../../../img/google-play.svg"), alt="")
+        section.services
+            +icon-box({
+                'img': 'ic-delivery.svg',
+                'title': 'Fast Worldwide Shipping',
+                'text': 'Get free shipping over $250'
+            })
+            .services__divider
+            +icon-box({
+                'img': 'ic-call-center.svg',
+                'title': '24/7 Customer Support',
+                'text': 'Friendly 24/7 customer support'
+            })
+            .services__divider
+            +icon-box({
+                'img': 'ic-shield.svg',
+                'title': 'Money Back Guarantee',
+                'text': 'We return money within 30 days'
+            })
+            .services__divider
+            +icon-box({
+                'img': 'ic-credit-card.svg',
+                'title': 'Secure Online Payment',
+                'text': 'Accept all major credit cards'
+            })
+        section.insta-block 
+            .insta-block__inner
+                .insta-block__inner_top-title Follow us on Instagram
+                .insta-block__inner_title @createx_store
+                .insta-block__inner_link 
+                    +button({
+                        'title': 'Follow instagram',
+                        'href': '#',
+                        'style': 'empty'   
+                    })
+            .insta-block__img
+                img(src=require('../../../img/inst-men.png'), alt="men")
+                img(src=require('../../../img/inst-boots.png'), alt="boots")
+                img(src=require('../../../img/inst-kid.png'), alt="kid")
+        section.fashion-block
+            .fashion-block__inner
+                .fashion-block__inner_title 
+                    +title('Fashion blog')
+                .fashion-block__inner_link
+                    +button({
+                        'title': 'View blog',
+                        'href': '#',
+                        'style': 'empty'
+                    })
+            .fashion-block__list
+                +blog-card({
+                    'img': 'fashion-blog.png',
+                    'title': 'Bag Trends for Summer 2020',
+                    'link': '#',
+                    'section': 'Fashion',
+                    'dateOfCreation': 'August 24, 2020',
+                    'coments': '0',
+                    'briefInformation': 'Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...'
+                })
+                +blog-card({
+                    'img': 'lifestyle-blog.png',
+                    'title': 'Top 10 of This Season’s Hottest Sneakers',
+                    'link': '#',
+                    'section': 'Lifestyle',
+                    'dateOfCreation': 'July 16, 2020',
+                    'coments': '4',
+                    'briefInformation': 'Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...'
+                })
+        section.brands
+            img(src=require('../../../img/InDepthLogo.svg'), alt="")
+            img(src=require('../../../img/HigherFitLogo.svg'), alt="")
+            img(src=require('../../../img/SentinalConsultingLogo.svg'), alt="")
+            img(src=require('../../../img/NationalHealthLogo.svg'), alt="")
+            img(src=require('../../../img/ForSaleLogo.svg'), alt="")
+            img(src=require('../../../img/DelMarStrategyLogo.svg'), alt="")
     script(src=require("../../components/hero-slide/hero-slide.js"))  
     script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 
     script(src=require("../../components/banner/banner.js")) 
