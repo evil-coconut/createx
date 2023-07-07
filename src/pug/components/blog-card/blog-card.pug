@@ -1,0 +1,20 @@
+mixin blog-card(obj)
+    .blog-card 
+        .blog-card__img
+            img(src=require(`../../../img/${obj.img}`), alt="")
+        .blog-card__inner
+            .blog-card__inner_title 
+                a(href=obj.link class='blog-card__inner_title-link')=obj.title 
+            .blog-card__inner_meta
+                .blog-card__inner_meta-section=obj.section
+                .blog-card__inner_meta-delimiter
+                .blog-card__inner_meta-data=obj.dateOfCreation
+                .blog-card__inner_meta-delimiter
+                .blog-card__inner_meta-coments
+                    if obj.coments == '0' 
+                        p.icon-chat 
+                        p No coments 
+                    else 
+                        p.icon-chat
+                        p #{obj.coments} coments
+            .blog-card__inner_brief-information=obj.briefInformation
