@@ -1,7 +1,7 @@
 extends ../../layout/layout.pug
 
 block variables
-    - var pageTitle = 'Homepage'
+    - var pageTitle = 'Createx'
     - var keywords = 'Homepage Createx'
     - var linkStyle = './index/index.scss'
 
@@ -211,9 +211,12 @@ block content
             img(src=require('../../../img/NationalHealthLogo.svg'), alt="")
             img(src=require('../../../img/ForSaleLogo.svg'), alt="")
             img(src=require('../../../img/DelMarStrategyLogo.svg'), alt="")
+        section.subscribe-for-updates
+            include ../../components/subscribe/subscribe.pug
     script(src=require("../../components/hero-slide/hero-slide.js"))  
     script(src=require("../../components/carousel-arrivals/carousel-arrivals.js")) 
     script(src=require("../../components/banner/banner.js")) 
     script(src=require("../../components/carousel-trending/carousel-trending.js"))  
     script(src=require("../../components/carousel-sale/carousel-sale.js")) 
     script(src=require("../../components/card-product/card-product.js"))
+    script(src=require("../../components/subscribe/subscribe.js"))
