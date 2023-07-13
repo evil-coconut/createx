@@ -1,0 +1,29 @@
+include ../input/input.pug
+
+.subscribe 
+    .subscribe__content
+        .subscribe__info 
+            .subscribe__info_title Subscribe for updates
+            .subscribe__info_subtitle Subscribe for exclusive early sale access and new arrivals.
+            form(name='subscribe' method='get')
+                .subscribe__info_sex
+                    .subscribe__info_sex-woman Woman
+                    .subscribe__info_sex-men Men
+                    .subscribe__info_sex-girl Girls
+                    .subscribe__info_sex-boy Boys
+                .subscribe__info_email
+                    +input({
+                        'style': 'large',
+                        'label': 'Email',
+                        'type': 'email',
+                        'name': 'email',
+                        'placeholder': 'Your working email',
+                        'id': 'subscribe-email',
+                        'button': 'Subscribe'
+                    })
+                .subscribe__info_checkbox
+                    label.subscribe__info_checkbox-label(for='subscribe-checkbox')
+                        input#subscribe-checkbox(type="checkbox", name="")  
+                        .subscribe__info_checkbox-check
+                        .subscribe__info_checkbox-text I agree to receive communications from Createx Store.
+        img.subscribe__img(src=require('../../../img/subscribe.svg'))
