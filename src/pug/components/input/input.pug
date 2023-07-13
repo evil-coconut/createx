@@ -1,0 +1,15 @@
+mixin input(obj)
+    .input
+        label.input__label(for=obj.id)=obj.label
+            input(type=obj.type, name=obj.name, placeholder=obj.placeholder, id=obj.id, class=`input__input input__input_${obj.style}`)
+            .input__success
+                .input__icon_success.icon_mark
+                .input__text_success Looks good!
+            .input__danger
+                .input__icon_danger.icon_danger
+                .input__text_danger Please provide a valid input.
+        if obj.button 
+            button(type='button' class=`input__button input__button_${obj.style}`)=obj.button
+        if obj.icon
+            p.input__icon(class=obj.icon)
+//  style: large(height: 52px), default(height: 44px), small(height: 36px)
