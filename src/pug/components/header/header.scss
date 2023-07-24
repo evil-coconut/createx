@@ -1,37 +1,107 @@
 @import '../menu/menu.scss';
 @import '../megamenu/megamenu.scss';
-@import '../search/search.scss';
+@import '../input/input.scss';
 @import '../tool-bar/tool-bar.scss';
+@import '../lang-currency/lang-currency.scss';
+@import '../menu-secondary/menu-secondary.scss';
 
 .header {
-    &__content {
-        height: 84px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    position: relative;
+    z-index: 11;
+    .top-header {
+        height: 44px;
+        background-color: $gray-900;
+        font-size: $FS-small;
+        color: $white;
         position: relative;
+        z-index: 20;
+        &__content {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__text-number {}
+        &__menu-secondary {
+            padding: 0 1px 1px 0;
+            width: 364px;
+        }
+        &__inner {
+            width: 273px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__lang-currency {} 
+        &__account {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &__account_icon {
+            font-size: 16px;
+            margin: 0 8px 0 0;
+        }
+        &__account_slash {
+            margin: 0 4px;
+        }
+        &__text-number_bold {
+            font-weight: 700;
+        }   
+        &__link {
+            color: $white;
+        }
+        &__text-number, &__account, &__menu{
+            opacity: 0.6;
+            padding: 0 0 1px 0;
+        }
+    } 
+    .middle-header {
+        height: 84px;
+        background-color: #ffffff;
+        position: relative;
+        z-index: 20;
+        &__content {
+            height: 84px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &__logo {
+            margin: 2px 60px 0 0;
+        }
+        &__menu {}
+        &__search {
+            width: 380px;
+            margin-left: 132px;
+        }
+        &__tool-bar {
+            margin-left: 48px;
+        }
     }
-    &__logo {
-        margin-right: 60px;
-    }
-    &__menu {}
     &__megamenu {
+        width: 100%;
         display: none;
         position: absolute;
-        top: 85px;
+        top: 128px;
         left: 0;
         z-index: 10;
+        border-radius: 0px 0px 4px 4px;
     }
-    &__search {
-        width: 380px;
-        height: 44px;
-        margin-left: 132px;
-    }
-    &__tool-bar {
-        margin-left: 48px;
+    &__megamenu_background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: $gray-900;
+        opacity: 0.75;
+        z-index: 5;
     }
     ._container {
-        max-width: 1230px;
+        max-width: 1231px;
         margin: 0 auto;
     }
     ._active {

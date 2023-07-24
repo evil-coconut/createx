@@ -1,14 +1,60 @@
-include ../search/search.pug
+include ../menu-secondary/menu-secondary.pug
+include ../input/input.pug
 
 header.header 
-    .header__content._container 
-        .header__logo 
-            img(src=require('../../../img/logo.svg'), alt='logo')
-        .header__menu
-            include ../menu/menu.pug
-        .header__megamenu
-            include ../megamenu/megamenu.pug
-        .header__search 
-            +search('Search for products...')
-        .header__tool-bar
-            include ../tool-bar/tool-bar.pug
+    .header__top-header.top-header
+        .top-header__content._container 
+            .top-header__text-number 
+                p Available 24/7 at 
+                    span.top-header__text-number_bold (405) 555-0128
+            .top-header__menu-secondary
+                +menu-secondary([
+                    {   
+                        'title': 'Delivery & returns',
+                        'href': '#'
+                    },
+                    {
+                        'title': 'Track order',
+                        'href': '#'
+                    },
+                    {
+                        'title': 'Blog',
+                        'href': '#'
+                    },
+                    {   
+                        'title': 'Contacts',
+                        'href': '#'
+                    }
+                ],
+                {
+                    'style': 'row',
+                    'font': '14'
+                })
+            .top-header__inner
+                .top-header__lang-currency 
+                    include ../lang-currency/lang-currency.pug
+                .top-header__account
+                    p.top-header__account_icon.icon_profile
+                    a.top-header__link(href='#') Log in 
+                    p.top-header__account_slash / 
+                    a.top-header__link(href='#')  Register
+    .header__middle-header.middle-header
+        .middle-header__content._container 
+            .middle-header__logo 
+                img(src=require('../../../img/logo.svg'), alt='logo')
+            .middle-header__menu
+                include ../menu/menu.pug
+            .middle-header__search 
+                +input({
+                    'type': 'search',
+                    'name': 'search',
+                    'placeholder': 'Search for products...',
+                    'id': 'header-search',
+                    'style': 'default',
+                    'icon': 'icon_search'
+                })
+            .middle-header__tool-bar
+                include ../tool-bar/tool-bar.pug
+    .header__megamenu
+        include ../megamenu/megamenu.pug
+        .header__megamenu_background
