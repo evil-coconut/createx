@@ -5,6 +5,10 @@
     height: 487px;
     background-color: $white;
     box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    border: solid $gray-300;
+    border-width: 1px 0 0 0;
     &__content {
         width: 1230px;
         height: 100%;

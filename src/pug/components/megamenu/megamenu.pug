@@ -15,17 +15,17 @@ include ../button/button.pug
                 a.megamenu__link._megamenu-link-sale(href="#") Sale up to 70%
             .megamenu__clothes
                 .megamenu__title
-                    +title({'title': 'CLOTHES'})
+                    +title({'tag': 'h3', 'color': 'black', 'title': 'CLOTHES'})
                 each obj in clothes
                     a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
             .megamenu__shoes 
                 .megamenu__title
-                    +title({'title': 'SHOES'})
+                    +title({'tag': 'h3', 'color': 'black', 'title': 'SHOES'})
                 each obj in shoes
                     a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
             .megamenu__accessories
                 .megamenu__title 
-                    +title({'title': 'ACCESSORIES'})
+                    +title({'tag': 'h3', 'color': 'black', 'title': 'ACCESSORIES'})
                 each obj in accessories
                     a.megamenu__link._megamenu-link-gray(href=obj.href)=obj.title
         .megamenu__divider
@@ -33,4 +33,4 @@ include ../button/button.pug
             img(src=require('../../../img/menu-banner.png'), alt="menu-banner")
             p.megamenu__banner-text Back to school. Sale up to 50%
             .megamenu__banner-button
-                +button({'title': 'See offers', 'href': '#', 'style': 'arrow', 'arrow': 'true'})
+                +button({'title': 'See offers', 'href': '#', 'style': 'empty', 'icon': 'arrow', 'size': 'small'})
