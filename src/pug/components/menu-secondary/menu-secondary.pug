@@ -1,6 +1,6 @@
-mixin menu-secondary(arr)
+mixin menu-secondary(arr, obj)
     .menu-secondary 
-        ul.menu-secondary__body 
-            each obj in arr
+        ul(class=`menu-secondary__body-${obj.style}`) 
+            each val in arr
                 li.menu-secondary__item
-                    a.menu-secondary__link(href=obj.href)=obj.title
+                    a(href=val.href class=`menu-secondary__link-${obj.font}`)=val.title
