@@ -1,8 +1,26 @@
 .title {
-    &__content {
+    &__h2 {
         color: $gray-900;
         font-weight: 900;
         font-size: 46px;
         line-height: 130%;
+    }
+    &__h3-black {
+        color: $gray-900;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1px;
+    }
+    &__h3-white {
+        color: $white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
 }

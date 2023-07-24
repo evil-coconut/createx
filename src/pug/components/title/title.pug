@@ -1,3 +1,6 @@
-mixin title(title)
+mixin title(obj)
     .title 
-        h2.title__content=title
+        if obj.tag == 'h2'
+            h2.title__h2=obj.title
+        else 
+            h3(class=`title__h3-${obj.color}`)=obj.title
