@@ -34,7 +34,10 @@ block content
                     'title': 'Kids’'
                 })
         section.new-arrivals 
-            +title('New arrivals')
+            +title({
+                    'tag': 'h2',
+                    'title': 'New arrivals'
+                })
             p.new-arrivals__text Check out our latest arrivals for the upcoming season
             a.new-arrivals__link(href='#') See the collection here
             .new-arrivals__carousel
@@ -51,7 +54,7 @@ block content
                 'title': 'Stay Warm With Our New Sweaters',
                 'button': 'Shop now',
                 'img': 'banner-2',
-                'limited': '2023-06-30T15:00'
+                'limited': '2023-08-30T15:00'
             })
             +banner({
                 'topTitle': 'New collection',
@@ -66,7 +69,10 @@ block content
                 'input': 'true'
             })
         section.popular-categories
-            +title('Popular categories')
+            +title({
+                    'tag': 'h2',
+                    'title': 'Popular categories'
+                })
             .popular-categories__list 
                 +img-link({
                     'img': '../../../img/pc-tops.png',
@@ -106,7 +112,10 @@ block content
                 })
         section.trending-now 
             .trending-now__title
-                +title('Trending now')
+                +title({
+                    'tag': 'h2',
+                    'title': 'Trending now'
+                })
             .trending-now__carousel
                 include ../../components/carousel-trending/carousel-trending.pug 
             .trending-now__link 
@@ -114,10 +123,14 @@ block content
                     'title': 'Explore top sales',
                     'href': '#',
                     'style': 'empty',
+                    'size': 'large',
                 })
         section.sale
             .sale__title
-                +title('Sale up to 70%')
+                +title({
+                    'tag': 'h2',
+                    'title': 'Sale up to 70%'
+                })
             .sale__carousel
                 include ../../components/carousel-sale/carousel-sale.pug 
             .sale__link 
@@ -125,6 +138,7 @@ block content
                     'title': 'See all sale products',
                     'href': '#',
                     'style': 'empty',
+                    'size': 'large',
                 })
         section.mobile-app 
             .mobile-app__block-white
@@ -169,7 +183,8 @@ block content
                     +button({
                         'title': 'Follow instagram',
                         'href': '#',
-                        'style': 'empty'   
+                        'style': 'empty',
+                        'size': 'large', 
                     })
             .insta-block__img
                 img(src=require('../../../img/inst-men.png'), alt="men")
@@ -178,12 +193,16 @@ block content
         section.fashion-block
             .fashion-block__inner
                 .fashion-block__inner_title 
-                    +title('Fashion blog')
+                    +title({
+                        'tag': 'h2',
+                        'title': 'Fashion blog'
+                    })
                 .fashion-block__inner_link
                     +button({
                         'title': 'View blog',
                         'href': '#',
-                        'style': 'empty'
+                        'style': 'empty',
+                        'size': 'large',
                     })
             .fashion-block__list
                 +blog-card({
