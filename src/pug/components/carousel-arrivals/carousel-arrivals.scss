@@ -25,11 +25,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 41px 0 0 0;
+        margin: 40px 0 0 0;
     }
     &__dot-item {
         width: 30px;
-        height: 2px;
+        height: 3px;
         background-color: $gray-500;
         border-radius: 3px;
     }
