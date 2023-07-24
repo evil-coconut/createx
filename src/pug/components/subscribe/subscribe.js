@@ -18,18 +18,23 @@ function selectButton(btn) {
         itemsToSend.splice(index, 1);
     }
 }
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
 
-document.querySelector('.input__button').addEventListener('click', () => {
-    let input = document.querySelector('.input__input');
-    let inputEmail = input.value;
-
-    if(inputEmail.includes('@gmail.com') || inputEmail.includes('@yandex.ru')) {
-        (document.querySelector('.input__danger')).classList.remove('input__active');
-        input.classList.remove('input__input_danger');
-        (document.querySelector('.input__success')).classList.add('input__active');
+document.querySelector('.subscribe-button').addEventListener('click', () => {
+    let inputSubscribe = document.getElementById('subscribe-email');
+    let inputEmailSubscribe = inputSubscribe.value;
+    let subscribeContainer = document.querySelector('.subscribe__info_email');
+    if(validateEmail(inputEmailSubscribe)) {
+        (subscribeContainer.querySelector('.input__danger')).classList.remove('input__active');
+        inputSubscribe.classList.remove('input__input_danger');
+        (subscribeContainer.querySelector('.input__success')).classList.add('input__active');
     } else {
-        (document.querySelector('.input__success')).classList.remove('input__active');
-        (document.querySelector('.input__danger')).classList.add('input__active');
-        input.classList.add('input__input_danger');
+        (subscribeContainer.querySelector('.input__success')).classList.remove('input__active');
+        (subscribeContainer.querySelector('.input__danger')).classList.add('input__active');
+        inputSubscribe.classList.add('input__input_danger');
     }
 })
