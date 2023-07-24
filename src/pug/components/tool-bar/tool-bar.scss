@@ -5,14 +5,19 @@
     justify-content: space-between;
     &__wishlist {
         width: 38px;
-        a {
-            display: flex;
-            justify-content: space-between;
-            font-size: 18px;
-            margin-top: 2px;
-        }
+    }
+    &__wishlist_link {
+        color: $gray-800;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+    &__wishlist_link:hover, &__wishlist_link:active {
+        color: $primary;
     }
     &__wishlist-number {
+        font-family: $mainFont;
         color: $gray-800;
         font-size: $FS-base;
     }
@@ -23,11 +28,15 @@
     }
     &__cart {
         width: 53px;
-        a {
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-        }
+    }
+    &__cart_link {
+        color: $gray-800;
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+    }
+    &__cart_link:hover, &__cart_link:active {
+        color: $primary;
     }
     &__cart-number {
         display: flex;
@@ -36,6 +45,7 @@
         width: 23px;
         height: 20px;
         border-radius: 4px;
+        font-family: $mainFont;
         color: $white;
         font-size: $FS-extrasmall;
         font-weight: 900;
