@@ -1,0 +1,107 @@
+include ../title/title.pug
+include ../menu-secondary/menu-secondary.pug
+
+.footer
+    .footer__content 
+        .footer__content-col
+            +title({
+                'tag': 'h3',
+                'title': 'HELP',
+                'color': 'white'
+            })
+            +menu-secondary([
+                {
+                    'title': 'Delivery & returns',
+                    'href': '#'
+                },
+                {
+                    'title': 'FAQ',
+                    'href': '#'
+                },
+                {
+                    'title': 'Track order',
+                    'href': '#'
+                },
+                {
+                    'title': 'Contacts',
+                    'href': '#'
+                },
+                {
+                    'title': 'Blog',
+                    'href': '#'
+                }
+            ],
+            {
+                'style': 'column',
+                'font': '16'
+            })
+        .footer__content-col
+            +title({
+                'tag': 'h3',
+                'title': 'Shop',
+                'color': 'white'
+            })
+            +menu-secondary([
+                {
+                    'title': 'New arrivals',
+                    'href': '#'
+                },
+                {
+                    'title': 'Trending now',
+                    'href': '#'
+                },
+                {
+                    'title': 'Sales',
+                    'href': '#'
+                },
+                {
+                    'title': 'Brands',
+                    'href': '#'
+                }
+            ],
+            {
+                'style': 'column',
+                'font': '16'
+            })
+        .footer__content-col
+            +title({
+                'tag': 'h3',
+                'title': 'Get in touch',
+                'color': 'white'
+            })
+            .footer__content-col_inner
+                .footer__content-col_number
+                    .footer__content-col_number-text Call:
+                    .footer__content-col_number-num (405) 555-0128
+                .footer__content-col_email
+                    .footer__content-col_email-text Email:
+                    .footer__content-col_email-mail hello@createx.com
+            .footer__content-col_icons
+                a(href='#' class='footer__content-col_icons-item icon_facebook')
+                    .footer__content-col_icons-item_box
+                a(href='#' class='footer__content-col_icons-item icon_instagram')
+                    .footer__content-col_icons-item_box
+                a(href='#' class='footer__content-col_icons-item icon_twitter')
+                    .footer__content-col_icons-item_box
+                a(href='#' class='footer__content-col_icons-item icon_youtube')
+                    .footer__content-col_icons-item_box
+                a(href='#' class='footer__content-col_icons-item icon_pinterest')
+                    .footer__content-col_icons-item_box
+        .footer__content-col
+            +title({
+                'tag': 'h3',
+                'title': 'Download our app',
+                'color': 'white'
+            })
+            .footer__content-col_link
+                a(href='#')
+                    img(src=require('../../../img/app-store.svg'), alt="")
+                a(href='#')
+                    img(src=require("../../../img/google-play.svg"), alt="")
+    .footer__copyright
+        .footer__copyright_inner
+            .footer__copyright-content 
+                .footer__copyright-content_text &#169; All rights reserved. Made with
+                .footer__copyright-content_icon.icon_heart-outline
+                .footer__copyright-content_text by Createx Studio 
+            a(href='#' class='footer__copyright-link') Go to top

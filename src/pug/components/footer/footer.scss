@@ -1,0 +1,108 @@
+@import '../title/title.scss';
+@import '../menu-secondary/menu-secondary.scss';
+
+.footer {
+    background-color: $gray-900;
+    &__content {
+        max-width: 1230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 60px 0;
+    }
+    &__content-col {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__content-col_number, &__content-col_email {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+    &__content-col_number-num, &__content-col_email-mail {
+        opacity: 0.6;
+    }
+    &__content-col_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__content-col_icons {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+    &__content-col_icons-item {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        color: $white;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content-col_icons-item_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: $white;
+        opacity: 0.12;
+    }
+    &__content-col_link {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__copyright {
+        height: 74px;
+        border: solid #ffffff26;
+        border-width: 1px 0 0 0;
+    }
+    &__copyright_inner {
+        height: 100%;
+        width: 1230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__copyright-content {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+    &__copyright-content_text {
+        color: $white;
+        font-family: $mainFont;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    &__copyright-content_icon {
+        font-size: 16px;
+        color: $primary;
+    }
+    &__copyright-link {
+        color: $white;
+        font-family: $mainFont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+        opacity: 0.6;
+    }
+}
