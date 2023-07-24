@@ -13,7 +13,7 @@
         position: absolute;
         top: 376px;
         color: $gray-800;
-
+        font-size: 24px;
         width: 48px;
         height: 48px;
         background: $white;
@@ -65,14 +65,9 @@
         flex-direction: row;
     }
     &__item-button_empty {
-        width: 152px;
-        height: 52px;
         margin-right: 24px;
     }
-    &__item-button_fill {
-        width: 229px;
-        height: 52px;
-    }
+    &__item-button_fill {}
     &__dots {
         position: absolute;
         top: 566px;
