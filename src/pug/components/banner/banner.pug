@@ -1,4 +1,5 @@
 include ../button/button.pug
+include ../input/input.pug
 
 mixin banner(obj)
     .banner
@@ -7,10 +8,16 @@ mixin banner(obj)
                 .banner__top-title=obj.topTitle
                 .banner__title=obj.title 
                 .banner__input 
-                    p.banner__input-text Email
-                    .banner__input-row
-                        input.banner__input-email(type="email" placeholder='Your working email')
-                        button.banner__input-button(type="submit") Subscribe
+                    +input({
+                        'style': 'default',
+                        'label': 'Email',
+                        'type': 'email',
+                        'name': 'email',
+                        'placeholder': 'Your working email',
+                        'id': 'banner-email',
+                        'button': 'Subscribe',
+                        'class': 'banner-button'
+                    })
                 .banner__input-text *Sign up to be the first to hear about exclusive deals, special offers and upcoming collections.
         else
             .banner__img 
@@ -23,14 +30,16 @@ mixin banner(obj)
                         +button({
                             'title': obj.button,
                             'href': '#',
-                            'style': 'arrow',
-                            'arrow': 'true'
+                            'style': 'empty',
+                            'icon': 'arrow',
+                            'size': 'regular'
                         })
                     else 
                         +button({
                             'title': obj.button,
                             'href': '#',
-                            'style': 'empty'
+                            'style': 'empty',
+                            'size': 'regular'
                         })
                 if(obj.limited)
                     .banner__limited 

@@ -21,3 +21,20 @@ let countdown = setInterval(function() {
         document.querySelector('.banner__limited-countdown').innerHTML = 'EXPIRED';
     }
 }, 1000)
+
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
+
+document.querySelector('.banner-button').addEventListener('click', () => {
+    let inputBanner = document.getElementById('banner-email');
+    let inputEmailBanner = inputBanner.value;
+
+    if(validateEmail(inputEmailBanner)) {
+        inputBanner.classList.remove('input__input_danger');
+    } else {
+        inputBanner.classList.add('input__input_danger');
+    }
+})
