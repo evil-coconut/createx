@@ -27,8 +27,8 @@
     }
     &__rating {
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 15px;
+        right: 9px;
 
         width: 86px;
         display: flex;
@@ -88,7 +88,7 @@
     }
     &__wishlist {
         position: absolute;
-        bottom: 16px;
+        bottom: 19px;
         right: 16px;
     }
     &__wishlist-button {
@@ -116,14 +116,21 @@
         color: $gray-800;
         font-size: $FS-large;
         line-height: 150%;
+        margin: 0 0 9px 0;
     }
     &__price-inner {
         display: flex;
         flex-direction: row;
     }
-    &__price {
+    &__price_large {
         color: $gray-900;
         font-size: 24px;
+        font-weight: 700;
+        line-height: 130%;
+    }
+    &__price_small {
+        color: $gray-900;
+        font-size: 20px;
         font-weight: 700;
         line-height: 130%;
     }
@@ -131,9 +138,15 @@
         color: $danger-color;
         margin-right: 12px;
     }
-    &__old-price {
+    &__old-price_large {
         color: $gray-700;
         font-size: $FS-large;
+        line-height: 150%;
+        text-decoration-line: line-through;
+    }
+    &__old-price_small {
+        color: $gray-700;
+        font-size: 16px;
         line-height: 150%;
         text-decoration-line: line-through;
     }
@@ -207,7 +220,12 @@
         height: 16px;
         border-radius: 50%;
     }
+    &__button-icon {
+        color: #ffffff;
+        font-size: 16px;
+    }
     &__button {
+        font-family: $mainFont;
         width: 100%;
         background-color: $primary;
         border-radius: 4px;

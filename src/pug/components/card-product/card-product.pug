@@ -9,22 +9,22 @@ mixin card-product(obj)
                 .card-product__rating 
                     -for(let i = 0; i < 5; i++)
                         if(obj.rating > i)
-                            p.card-product__star-fill.icon-star_fill
+                            p.card-product__star-fill.icon_star-filled
                         else
-                            p.card-product__star.icon-star
+                            p.card-product__star.icon_star-outline
             .card-product__chevron
-                button(class=`icon-left_chevron card-product__left-chevron_${obj.style}`)
-                button(class=`icon-right_chevron card-product__right-chevron_${obj.style}`)
+                button(class=`icon_left-chevron card-product__left-chevron_${obj.style}`)
+                button(class=`icon_right-chevron card-product__right-chevron_${obj.style}`)
             .card-product__wishlist
-                button.card-product__wishlist-button.icon-heart
+                button.card-product__wishlist-button.icon_heart-outline
         .card-product__inner-bottom
             .card-product__title=obj.title
             if obj.discount 
                 .card-product__price-inner
-                    .card-product__price.card-product__price_sale=obj.price 
-                    .card-product__old-price $#{obj.oldPrice}
+                    div(class=`card-product__price_${obj.style} card-product__price_sale`) $#{obj.price}
+                    div(class=`card-product__old-price_${obj.style}`) $#{obj.oldPrice}
             else 
-                .card-product__price $#{obj.price}
+                div(class=`card-product__price_${obj.style}`) $#{obj.price}
             if obj.color || obj.sizes
                 div(class=`card-product__hidden-block_${obj.style}`) 
                     .card-product__hidden-block_inner
@@ -37,7 +37,11 @@ mixin card-product(obj)
                                 each b in obj.color
                                     .card-product__color-item
                                         div(class='card-product__color-item_'+b style=`background-color: ${b}`)
-                    button.card-product__button.icon-shopping_cart Add to cart
+                    button.card-product__button 
+                        .card-product__button-icon.icon_cart
+                        span Add to cart
             else 
                 div(class=`card-product__hidden-block_${obj.style}`)
-                    button.card-product__button.icon-shopping_cart Add to cart
+                    button.card-product__button 
+                        .card-product__button-icon.icon_cart
+                        span Add to cart
