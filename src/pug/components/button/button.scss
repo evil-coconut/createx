@@ -1,50 +1,70 @@
 .button {
-    height: 100%;
-    border-radius: 4px;
-    &__empty {
-        display: inline-flex;
-        font-size: $FS-base;
-        color: $primary;
-        border: 1px solid $primary;
-        padding: 0 32px;
-        a:visited {
-            color: $primary;
-        }
-    }
-    &__fill {
-        display: inline-flex;
-        font-size: $FS-base;
-        color: $white;
-        background-color: $primary;
-        padding: 0 40px;
-        a:visited {
-            color: $white;
-        }
-    }
-    &__arrow {
-        display: inline-flex;
-        align-items: center;
-        font-weight: 700;
-        font-size: $FS-extrasmall;
-        line-height: 36px;
-        color: $primary;
-        border: 1px solid $primary;
-        padding: 0 32px;
-        a:visited {
-            color: $primary;
-        }
-    }
     &__link {
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-align: center;
+        border-radius: 4px;
+        white-space: nowrap;
     }
-    &__icon-arrow {
-        margin: 0 0 0 10px;
+
+    &__link_fill {
+        color: $white;
+        background-color: $primary;
+        transition: all .3s;
     }
-    .icon-right_arrow {
+    &__link_empty {
         color: $primary;
-        font-size: 10px;
+        background-color: #ffffff00;
+        border: 1px solid $primary;
+        transition: all .3s;
+    }
+
+    &__link_large {
+        font-size: 16px;
+        height: 52px;
+        padding: 0 40px;
+    }
+    &__link_regular {
+        font-size: 14px;
+        height: 44px;
+        padding: 0 32px;
+    }
+    &__link_small {
+        font-size: 12px;
+        height: 36px;
+        padding: 0 24px;
+    }
+
+    &__icon-right {
+        color: $primary;
+    }
+    &__icon-right_large {
+        font-size: 24px;
+    }
+    &__icon-right_regular {
+        font-size: 16px;
+    }
+    &__icon-right_small {
+        font-size: 16px;
+    }
+    &__link_fill:hover, &__link_fill:active {
+        background-color: #145C5D;
+        transition: all .3s;
+    }
+    &__link_empty:hover, &__link_empty:active {
+        background-color: $primary;
+        color: $white;
+        transition: all .3s;
+    }
+    &__link_empty:hover &__icon-right {
+        color: $white;
     }
 }

@@ -1,6 +1,6 @@
 mixin button(obj)
-    -var classStyle = 'button__' + obj.style
-    div(class="button "+classStyle)
-        a.button__link(href=obj.href)=obj.title 
-        if obj.arrow 
-            p.button__icon-arrow.icon-right_arrow   
+    .button 
+        a(href=obj.href class=`button__link button__link_${obj.style} button__link_${obj.size}`)=obj.title
+            if obj.icon == 'arrow'
+                div(class=`icon_right button__icon-right button__icon-right_${obj.size}`)
+    //style: empty fill *** size: large 52, regular 44, small 36,
