@@ -12,9 +12,9 @@ mixin blog-card(obj)
                 .blog-card__inner_meta-delimiter
                 .blog-card__inner_meta-coments
                     if obj.coments == '0' 
-                        p.icon-chat 
+                        p.icon_chat 
                         p No coments 
                     else 
-                        p.icon-chat
+                        p.icon_chat
                         p #{obj.coments} coments
             .blog-card__inner_brief-information=obj.briefInformation
