@@ -1,5 +1,6 @@
 include ../menu-secondary/menu-secondary.pug
 include ../input/input.pug
+include ../megamenu/megamenu.pug
 
 header.header 
     .header__top-header.top-header
@@ -50,7 +51,46 @@ header.header
                 .middle-header__logo 
                     img(src=require('../../../img/logo.svg'), alt='logo')
                 .middle-header__menu
-                    include ../menu/menu.pug
+                    .menu
+                        .menu__content
+                            .menu__women 
+                                .menu__women-link._menu-link Women
+                                .menu__women-megamenu
+                                    +megamenu({
+                                        'link': 'women',
+                                        'clothes': [{'title': 'Coats', 'href': '#'}, {'title': 'Jackets', 'href': '#'}, {'title': 'Suits', 'href': '#'}, {'title': 'Dresses', 'href': '#'}, {'title': 'Cardigans & sweaters', 'href': '#'}, {'title': 'Sweatshirts & hoodies', 'href': '#'}, {'title': 'T-shirts & tops', 'href': '#'}, {'title': 'Pants', 'href': '#'}, {'title': 'Jeans', 'href': '#'}, {'title': 'Shorts', 'href': '#'}, {'title': 'Skirts', 'href': '#'}, {'title': 'Lingerie & nightwear', 'href': '#'}, {'title': 'Sportswear', 'href': '#'}, {'title': 'Swimwear', 'href': '#'}],
+                                        'shoes': [{'title': 'Boots', 'href': '#'}, {'title': 'Flat shoes', 'href': '#'}, {'title': 'Heels', 'href': '#'}, {'title': 'Sandals', 'href': '#'}, {'title': 'Mules', 'href': '#'}, {'title': 'Sliders', 'href': '#'}, {'title': 'Slippers', 'href': '#'}, {'title': 'Sneakers', 'href': '#'}, {'title': 'Leather', 'href': '#'}],
+                                        'accessories': [{'title': 'Bags & bagpacks', 'href': '#'}, {'title': 'Hats & scarves', 'href': '#'}, {'title': 'Hair accessories', 'href': '#'}, {'title': 'Belts', 'href': '#'}, {'title': 'Jewellery', 'href': '#'}, {'title': 'Watches', 'href': '#'}, {'title': 'Sunglasses', 'href': '#'}, {'title': 'Purses', 'href': '#'}, {'title': 'Gloves', 'href': '#'}, {'title': 'Socks & tights', 'href': '#'}]
+                                    })
+                            .menu__men 
+                                .menu__men-link._menu-link Men
+                                .menu__men-megamenu
+                                    +megamenu({
+                                        'link': 'men',
+                                        'clothes': [{'title': 'Coats', 'href': '#'}, {'title': 'Jackets', 'href': '#'}, {'title': 'Suits', 'href': '#'}, {'title': 'Cardigans & sweaters', 'href': '#'}, {'title': 'Sweatshirts & hoodies', 'href': '#'}, {'title': 'T-shirts & tops', 'href': '#'}, {'title': 'Pants', 'href': '#'}, {'title': 'Jeans', 'href': '#'}, {'title': 'Shorts', 'href': '#'}, {'title': 'Sportswear', 'href': '#'}, {'title': 'Swimming trunks', 'href': '#'}],
+                                        'shoes': [{'title': 'Boots', 'href': '#'}, {'title': 'Flat shoes', 'href': '#'}, {'title': 'Sandals', 'href': '#'}, {'title': 'Mules', 'href': '#'}, {'title': 'Sliders', 'href': '#'}, {'title': 'Slippers', 'href': '#'}, {'title': 'Sneakers', 'href': '#'}, {'title': 'Leather', 'href': '#'}],
+                                        'accessories': [{'title': 'Bags & bagpacks', 'href': '#'}, {'title': 'Hats & scarves', 'href': '#'}, {'title': 'Hair accessories', 'href': '#'}, {'title': 'Belts', 'href': '#'}, {'title': 'Jewellery', 'href': '#'}, {'title': 'Watches', 'href': '#'}, {'title': 'Sunglasses', 'href': '#'}, {'title': 'Purses', 'href': '#'}, {'title': 'Gloves', 'href': '#'}, {'title': 'Socks & tights', 'href': '#'}]
+                                    })
+                            .menu__girls
+                                .menu__girls-link._menu-link Girls
+                                .menu__girls-megamenu
+                                    +megamenu({
+                                        'link': 'girls',
+                                        'clothes': [{'title': 'Coats', 'href': '#'}, {'title': 'Jackets', 'href': '#'}, {'title': 'Suits', 'href': '#'}, {'title': 'Dresses', 'href': '#'}, {'title': 'Cardigans & sweaters', 'href': '#'}, {'title': 'Sweatshirts & hoodies', 'href': '#'}, {'title': 'T-shirts & tops', 'href': '#'}, {'title': 'Pants', 'href': '#'}, {'title': 'Jeans', 'href': '#'}, {'title': 'Shorts', 'href': '#'}, {'title': 'Skirts', 'href': '#'}, {'title': 'Lingerie & nightwear', 'href': '#'}, {'title': 'Sportswear', 'href': '#'}, {'title': 'Swimwear', 'href': '#'}],
+                                        'shoes': [{'title': 'Boots', 'href': '#'}, {'title': 'Flat shoes', 'href': '#'}, {'title': 'Heels', 'href': '#'}, {'title': 'Sandals', 'href': '#'}, {'title': 'Mules', 'href': '#'}, {'title': 'Sliders', 'href': '#'}, {'title': 'Slippers', 'href': '#'}, {'title': 'Sneakers', 'href': '#'}, {'title': 'Leather', 'href': '#'}],
+                                        'accessories': [{'title': 'Bags & bagpacks', 'href': '#'}, {'title': 'Hats & scarves', 'href': '#'}, {'title': 'Hair accessories', 'href': '#'}, {'title': 'Belts', 'href': '#'}, {'title': 'Jewellery', 'href': '#'}, {'title': 'Watches', 'href': '#'}, {'title': 'Sunglasses', 'href': '#'}, {'title': 'Purses', 'href': '#'}, {'title': 'Gloves', 'href': '#'}, {'title': 'Socks & tights', 'href': '#'}]
+                                    })
+                            .menu__boys 
+                                .menu__boys-link._menu-link Boys
+                                .menu__boys-megamenu
+                                    +megamenu({
+                                        'link': 'boys',
+                                        'clothes': [{'title': 'Coats', 'href': '#'}, {'title': 'Jackets', 'href': '#'}, {'title': 'Suits', 'href': '#'}, {'title': 'Cardigans & sweaters', 'href': '#'}, {'title': 'Sweatshirts & hoodies', 'href': '#'}, {'title': 'T-shirts & tops', 'href': '#'}, {'title': 'Pants', 'href': '#'}, {'title': 'Jeans', 'href': '#'}, {'title': 'Shorts', 'href': '#'}, {'title': 'Sportswear', 'href': '#'}, {'title': 'Swimming trunks', 'href': '#'}],
+                                        'shoes': [{'title': 'Boots', 'href': '#'}, {'title': 'Flat shoes', 'href': '#'}, {'title': 'Sandals', 'href': '#'}, {'title': 'Mules', 'href': '#'}, {'title': 'Sliders', 'href': '#'}, {'title': 'Slippers', 'href': '#'}, {'title': 'Sneakers', 'href': '#'}, {'title': 'Leather', 'href': '#'}],
+                                        'accessories': [{'title': 'Bags & bagpacks', 'href': '#'}, {'title': 'Hats & scarves', 'href': '#'}, {'title': 'Hair accessories', 'href': '#'}, {'title': 'Belts', 'href': '#'}, {'title': 'Jewellery', 'href': '#'}, {'title': 'Watches', 'href': '#'}, {'title': 'Sunglasses', 'href': '#'}, {'title': 'Purses', 'href': '#'}, {'title': 'Gloves', 'href': '#'}, {'title': 'Socks & tights', 'href': '#'}]
+                                    })
+                            .menu__sale 
+                                a.menu__sale-link._menu-link._menu-link-sale(href="#") Sale 
             .middle-header__content-inner
                 .middle-header__search 
                     +input({
@@ -69,6 +109,3 @@ header.header
             span 
             span 
             span
-    .header__megamenu
-        include ../megamenu/megamenu.pug
-        .header__megamenu_background

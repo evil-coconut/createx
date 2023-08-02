@@ -146,7 +146,65 @@
         &__logo {
             margin: 2px 60px 0 0;
         }
-        &__menu {}
+        &__menu {
+            .menu {
+                &__content {
+                    width: 349px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    @media (min-width: 320px) and (max-width: 944px) {
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+                    }
+                }
+                &__women {}
+                &__men {}
+                &__girls {}
+                &__boys {}
+                &__sale {}
+            
+                &__women-link {} 
+                &__men-link {}
+                &__girls-link {}
+                &__boys-link {}
+                &__sale-link {}
+            
+                ._menu-link {
+                    color: $gray-800;
+                    font-size: $FS-base;
+                    font-weight: 700;
+                    line-height: 25.6px;
+                    cursor: pointer;
+                }
+                ._menu-link:hover {
+                    color: $primary;
+                }
+                ._menu-link-primary {
+                    color: $primary;
+                }
+                ._menu-link-sale, ._menu-link-sale:hover {
+                    color: $danger-color;
+                }
+            }            
+        }
+        &__women-megamenu {}
+        &__men-megamenu {}
+        &__girls-megamenu {}
+        &__boys-megamenu {}
+        ._background-megamenu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background: $gray-900;
+            opacity: 0.75;
+            z-index: 5;
+        }
         &__search {
             width: 380px;
             margin-left: 10px;
@@ -181,11 +239,11 @@
                 right: 0;
                 background-color: #fff;
                 overflow-x: hidden;
-                padding: 0;
+                padding: 129px 0;
                 transition: 0.5s;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 gap: 20px;
                 box-shadow: $shadow-large;
@@ -248,25 +306,6 @@
                 }
             }
         }
-    }
-    &__megamenu {
-        width: 100%;
-        display: none;
-        position: absolute;
-        top: 128px;
-        left: 0;
-        z-index: 10;
-        border-radius: 0px 0px 4px 4px;
-    }
-    &__megamenu_background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background: $gray-900;
-        opacity: 0.75;
-        z-index: 5;
     }
     ._container {
         max-width: 1231px;

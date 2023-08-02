@@ -1,19 +1,3 @@
-//megamenu script
-let menuWomenLink = document.getElementById('menu-women');
-let menuWomenLinkBody = document.getElementsByClassName('menu__women-link')
-let megamenu = document.getElementsByClassName('header__megamenu');
-
-menuWomenLink.onclick = function() {
-    megamenu[0].classList.toggle("_active");
-    menuWomenLinkBody[0].classList.toggle("_menu-link-primary");
-}
-
-let backgroundMenu = document.querySelector('.header__megamenu_background');
-backgroundMenu.addEventListener('click', function() {
-    megamenu[0].classList.remove('_active');
-    menuWomenLinkBody[0].classList.remove('_menu-link-primary');
-})
-
 //special-offers script
 let widthSO = 217;
 let countSO = 1;
