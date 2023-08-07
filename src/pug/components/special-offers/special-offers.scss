@@ -1,68 +1,61 @@
 .special-offers {
     width: 100%;
     height: 34px;
-
     background-color: $primary;
-
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     &__wrapper {
         position: relative;
-        width: 272px;
-
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &__list {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        transition: 0.3s;
+    }
+    &__list-item {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: 0 15px;
     }
-    &__list {
-        width: 217px;
-        overflow: hidden;
-        padding: 0 0 2px 0;
-    }
-    &__list-body {
-        width: 800px;
-        display: flex;
-        transition: margin-left 250ms;
-    }
-    &__list-item {}
-    &__item-content {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-
-        color: $white;
-    }
-    &__text {
-        font-weight: 900;
-        font-size: $FS-extrasmall;
-        line-height: 150%;
-        margin: 0 4px 0 0;
-    }
-    &__link a {
+    &__text-underline {
         font-family: $mainFont;
         color: $white;
         font-weight: 400;
         font-size: $FS-extrasmall;
         line-height: 150%;
         text-decoration-line: underline;
+        white-space: nowrap;
     }
-    &__left-chevron {
-        left: 0;
-    }
-    &__right-chevron {
-        right: 0;
+    &__text {
+        color: $white;
+        font-weight: 900;
+        font-size: $FS-extrasmall;
+        line-height: 150%;
+        margin: 0 4px 0 0;
+        white-space: nowrap;
     }
     &__right-chevron, &__left-chevron {
-        position: absolute;
-        top: 10px;
         color: $white;
         font-size: 14px;
         cursor: pointer;
-        border: none;
-        background: #ffffff00;
+        background: $primary;
+        z-index: 10;
     }
-
+    @media (min-width: 320px) and (max-width: 767px) {
+        &__list {
+            max-width: 300px;
+        }
+    }
 }
