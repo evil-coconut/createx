@@ -18,21 +18,22 @@ block content
             .main-slide__hero-slide
                 include ../../components/hero-slide/hero-slide.pug
             .main-slide__top-categories
-                +img-link({
-                    'img': '../../../img/women.png',
-                    'href': '#',
-                    'title': 'Women’s'
-                })
-                +img-link({
-                    'img': '../../../img/men.png',
-                    'href': '#',
-                    'title': 'Men’s'
-                })
-                +img-link({
-                    'img': '../../../img/kid.png',
-                    'href': '#',
-                    'title': 'Kids’'
-                })
+                .main-slide__top-categories-inner
+                    +img-link({
+                        'img': '../../../img/women.png',
+                        'href': '#',
+                        'title': 'Women’s'
+                    })
+                    +img-link({
+                        'img': '../../../img/men.png',
+                        'href': '#',
+                        'title': 'Men’s'
+                    })
+                    +img-link({
+                        'img': '../../../img/kid.png',
+                        'href': '#',
+                        'title': 'Kids’'
+                    })
         section.new-arrivals 
             +title({
                     'tag': 'h2',

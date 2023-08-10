@@ -1,5 +1,6 @@
 let heroSlideButtonPrev = document.getElementById('hero-slide__button-prev');
 let heroSlideButtonNext = document.getElementById('hero-slide__button-next');
+let dotsBody = document.querySelector('.hero-slide__dots');
 
 let heroSlideIndex = 1;
 heroSlideShow(heroSlideIndex);
@@ -11,6 +12,10 @@ heroSlideButtonNext.onclick = function() {
 heroSlideButtonPrev.onclick = function() {
     heroSlideShow(heroSlideIndex -= 1);
 }
+
+dotsBody.onclick = function(e){ 
+    heroSlideShow(heroSlideIndex = +(e.target).innerHTML[1]);
+};
 
 function heroSlideShow(n) {
     let i;

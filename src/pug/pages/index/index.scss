@@ -12,7 +12,7 @@
 body {
     font-family: $mainFont;
 }
-
+.wrapper {}
 .main-slide {
     max-width: 1920px;
     position: relative;
@@ -21,11 +21,25 @@ body {
     &__top-categories {
         position: absolute;
         top: 740px;
-        left: 17%;
-        width: 1230px;
+        width: 100%;
+    }
+    &__top-categories-inner {
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    @media (min-width: 450px) and (max-width: 629px) {
+        &__top-categories {
+            top: 650px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 449px) {
+        &__top-categories {
+            top: 560px;
+        }
     }
 }
 

@@ -21,9 +21,11 @@
         border-radius: 50%;
         border: none;
         cursor: pointer;
+        transition: 0.3s;
     }
     &__button:hover {
         opacity: 1;
+        transition: 0.3s;
     }
     #hero-slide__button-prev {
         left: 32px;
@@ -33,6 +35,7 @@
     }
     &__body {
         display: none;
+        padding: 0 10px;
     }
     &__item {
         max-width: 1230px;
@@ -52,7 +55,7 @@
         margin: 0 0 12px 0;
     }
     &__item-title {
-        width: 550px;
+        width: 650px;
         color: $gray-900;
         font-weight: 900;
         font-size: $FS-display-1;
@@ -63,15 +66,15 @@
     &__item-inner {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
     }
-    &__item-button_empty {
-        margin-right: 24px;
-    }
+    &__item-button_empty {}
     &__item-button_fill {}
     &__dots {
         position: absolute;
         top: 566px;
-        left: 345px;
+        left: 18.2%;
         display: flex;
         flex-direction: row;
     }
@@ -85,15 +88,64 @@
         border: solid rgb(66, 69, 81, .3);
         border-width: 0 0 2px 0;
         margin-right: 4px;
-        p {
-            opacity: 0.6;
-        }
+        opacity: 0.6;
+        cursor: pointer;
     }
     ._active_dots {
         border: solid rgb(66, 69, 81);
         border-width: 0 0 2px 0;
-        p {
-            opacity: 1;
+        opacity: 1;
+    }
+    @media (min-width: 768px) and (max-width: 944px) {
+        &__dots {
+            left: 5%;
+        }
+    }
+    @media (min-width: 630px) and (max-width: 767px) {
+        &__item-title {
+            width: 450px;
+            font-size: 50px;
+        }
+        &__dots {
+            left: 5%;
+        }
+        &__dots-item {
+            width: 140px;
+        }
+    }
+    @media (min-width: 450px) and (max-width: 629px) {
+        &__item {
+            height: 700px;
+            padding: 80px 0 180px 0;
+        }
+        &__item-title {
+            width: 400px;
+            font-size: 40px;
+        }
+        &__dots {
+            left: 5%;
+        }
+        &__dots-item {
+            width: 100px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 449px) {
+        &__item {
+            height: 600px;
+            padding: 80px 0 180px 0;
+        }
+        &__item-title {
+            width: 310px;
+            font-size: 40px;
+            margin: 0 0 20px 0;
+        }
+        &__dots-item {
+            width: 70px;
+            font-size: 20px;
+        }
+        &__dots {
+            left: 5%;
+            top: 500px;
         }
     }
 }

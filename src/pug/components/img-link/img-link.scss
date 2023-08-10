@@ -17,4 +17,9 @@
         color: $gray-900;
         margin: 24px 0 0 0;
     }
+    @media (min-width: 320px) and (max-width: 449px) {
+        &__img {
+            width: 300px;
+        }
+    }
 }
