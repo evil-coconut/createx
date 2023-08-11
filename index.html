@@ -13,9 +13,10 @@
       rel="stylesheet">
     <link rel="stylesheet" href="css/iconsfont.7ef2e718.css">
     <link rel="stylesheet" href="css/header.05282c11.css">
-    <link rel="stylesheet" href="css/special-offers.fd4ac1bd.css">
+    <link rel="stylesheet" href="css/special-offers.fca33624.css">
     <link rel="stylesheet" href="css/footer.92490d44.css">
-    <link rel="stylesheet" href="css/index.a4f04dd8.css">
+    <link rel="stylesheet" href="css/index.0a4465c8.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   </head>
   <body>
     <header class="header">
@@ -609,28 +610,19 @@
       </div>
     </header>
     <div class="special-offers">
-      <div class="special-offers__wrapper"><button class="special-offers__left-chevron icon_left-chevron"
-          id="special-offers__prev"></button>
-        <div class="special-offers__list">
-          <ul class="special-offers__list-body">
-            <li class="special-offers__list-item">
-              <div class="special-offers__item-content">
-                <div class="special-offers__text">
-                  <p>Up to 70% Off.</p>
-                </div>
-                <div class="special-offers__link"> <a href="#">Shop our latest sale styles </a></div>
-              </div>
-            </li>
-            <li class="special-offers__list-item">
-              <div class="special-offers__item-content">
-                <div class="special-offers__text">
-                  <p> Two slides.</p>
-                </div>
-                <div class="special-offers__link"> <a href="#">Shop our latest sale styles </a></div>
-              </div>
-            </li>
-          </ul>
-        </div><button class="special-offers__right-chevron icon_right-chevron" id="special-offers__next"></button>
+      <div class="special-offers__wrapper">
+        <div class="special-offers__left-chevron icon_left-chevron"></div>
+        <div class="special-offers__list"><a class="special-offers__list-item" href="#">
+            <div class="special-offers__text">Up to 70% Off.</div>
+            <div class="special-offers__text-underline">Shop our latest sale styles </div>
+          </a><a class="special-offers__list-item" href="#">
+            <div class="special-offers__text">Two slides.Two slides.Two slides.</div>
+            <div class="special-offers__text-underline">Shop our latest sale styles </div>
+          </a><a class="special-offers__list-item" href="#">
+            <div class="special-offers__text">Three slides.</div>
+            <div class="special-offers__text-underline">Shop our latest sale styles </div>
+          </a></div>
+        <div class="special-offers__right-chevron icon_right-chevron"></div>
       </div>
     </div>
     <main class="wrapper">
@@ -676,35 +668,29 @@
               </div>
             </div>
             <div class="hero-slide__dots">
-              <div class="hero-slide__dots-item">
-                <p>01</p>
-              </div>
-              <div class="hero-slide__dots-item">
-                <p>02</p>
-              </div>
-              <div class="hero-slide__dots-item">
-                <p>03</p>
-              </div>
-              <div class="hero-slide__dots-item">
-                <p>04</p>
-              </div>
+              <div class="hero-slide__dots-item">01</div>
+              <div class="hero-slide__dots-item">02</div>
+              <div class="hero-slide__dots-item">03</div>
+              <div class="hero-slide__dots-item">04</div>
             </div><button class="hero-slide__button icon_left" id="hero-slide__button-prev"></button><button
               class="hero-slide__button icon_right" id="hero-slide__button-next"></button>
           </div>
         </div>
         <div class="main-slide__top-categories">
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
-                src="img/women.png" alt="Women’s">
-              <p class="img-link__title undefined">Women’s</p>
-            </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
-                src="img/men.png" alt="Men’s">
-              <p class="img-link__title undefined">Men’s</p>
-            </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
-                src="img/kid.png" alt="Kids’">
-              <p class="img-link__title undefined">Kids’</p>
-            </a></div>
+          <div class="main-slide__top-categories-inner">
+            <div class="img-link"> <a class="img-link__link " href="#"><img class="img-link__img" src="img/women.png"
+                  alt="Women’s">
+                <p class="img-link__title ">Women’s</p>
+              </a></div>
+            <div class="img-link"> <a class="img-link__link " href="#"><img class="img-link__img" src="img/men.png"
+                  alt="Men’s">
+                <p class="img-link__title ">Men’s</p>
+              </a></div>
+            <div class="img-link"> <a class="img-link__link " href="#"><img class="img-link__img" src="img/kid.png"
+                  alt="Kids’">
+                <p class="img-link__title ">Kids’</p>
+              </a></div>
+          </div>
         </div>
       </section>
       <section class="new-arrivals">
@@ -714,263 +700,280 @@
         <p class="new-arrivals__text">Check out our latest arrivals for the upcoming season</p><a
           class="new-arrivals__link" href="#">See the collection here</a>
         <div class="new-arrivals__carousel">
-          <div class="carousel-arrivals">
-            <div class="carousel-arrivals__list">
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/sport-cap.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
+          <div class="swiper carousel-arrivals">
+            <div class="swiper-wrapper carousel-arrivals__wrapper">
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/sport-cap.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Black and white sport cap</div>
-                  <div class="card-product__price_small">$18.15</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/sunglasses.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Metal bridge sunglasses</div>
-                  <div class="card-product__price_small">$89.95</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/green-baby-romper.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star icon_star-outline"></p>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Black and white sport cap</div>
+                    <div class="card-product__price_small">$18.15</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Green baby romper</div>
-                  <div class="card-product__price_small">$20.40</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
                 </div>
               </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/fit-jeans.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Mid-rise slim cropped fit jeans</div>
-                  <div class="card-product__price_small">$40.00</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/earrings.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/sunglasses.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Red dangle earrings</div>
-                  <div class="card-product__price_small">$29.95</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/baby-shoes.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Baby shoes with laces</div>
-                  <div class="card-product__price_small">$30.60</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/sport-cap.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Metal bridge sunglasses</div>
+                    <div class="card-product__price_small">$89.95</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Black and white sport cap</div>
-                  <div class="card-product__price_small">$18.15</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
                 </div>
               </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/sunglasses.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Metal bridge sunglasses</div>
-                  <div class="card-product__price_small">$89.95</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/green-baby-romper.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star icon_star-outline"></p>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/green-baby-romper.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star icon_star-outline"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Green baby romper</div>
-                  <div class="card-product__price_small">$20.40</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/fit-jeans.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Mid-rise slim cropped fit jeans</div>
-                  <div class="card-product__price_small">$40.00</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
-                </div>
-              </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/earrings.png"></div>
-                  <div class="card-product__rating">
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
-                    <p class="card-product__star-fill icon_star-filled"></p>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Green baby romper</div>
+                    <div class="card-product__price_small">$20.40</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
                   </div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
-                </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Red dangle earrings</div>
-                  <div class="card-product__price_small">$29.95</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
                 </div>
               </div>
-              <div class="card-product">
-                <div class="card-product__inner">
-                  <div class="card-product__img_small"><img src="img/baby-shoes.png"></div>
-                  <div class="card-product__chevron"><button
-                      class="icon_left-chevron card-product__left-chevron_small"></button><button
-                      class="icon_right-chevron card-product__right-chevron_small"></button></div>
-                  <div class="card-product__wishlist"><button
-                      class="card-product__wishlist-button icon_heart-outline"></button></div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/fit-jeans.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Mid-rise slim cropped fit jeans</div>
+                    <div class="card-product__price_small">$40.00</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
                 </div>
-                <div class="card-product__inner-bottom">
-                  <div class="card-product__title">Baby shoes with laces</div>
-                  <div class="card-product__price_small">$30.60</div>
-                  <div class="card-product__hidden-block_small"><button class="card-product__button">
-                      <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
-                    </button></div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/earrings.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Red dangle earrings</div>
+                    <div class="card-product__price_small">$29.95</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/baby-shoes.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Baby shoes with laces</div>
+                    <div class="card-product__price_small">$30.60</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/sport-cap.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Black and white sport cap</div>
+                    <div class="card-product__price_small">$18.15</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/sunglasses.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Metal bridge sunglasses</div>
+                    <div class="card-product__price_small">$89.95</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/green-baby-romper.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star icon_star-outline"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Green baby romper</div>
+                    <div class="card-product__price_small">$20.40</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/fit-jeans.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Mid-rise slim cropped fit jeans</div>
+                    <div class="card-product__price_small">$40.00</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/earrings.png"></div>
+                    <div class="card-product__rating">
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                      <p class="card-product__star-fill icon_star-filled"></p>
+                    </div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Red dangle earrings</div>
+                    <div class="card-product__price_small">$29.95</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide carousel-arrivals__slide">
+                <div class="card-product card-product__small">
+                  <div class="card-product__inner">
+                    <div class="card-product__img_small"><img src="img/baby-shoes.png"></div>
+                    <div class="card-product__chevron"><button
+                        class="icon_left-chevron card-product__left-chevron_small"></button><button
+                        class="icon_right-chevron card-product__right-chevron_small"></button></div>
+                    <div class="card-product__wishlist"><button
+                        class="card-product__wishlist-button icon_heart-outline"></button></div>
+                  </div>
+                  <div class="card-product__inner-bottom">
+                    <div class="card-product__title">Baby shoes with laces</div>
+                    <div class="card-product__price_small">$30.60</div>
+                    <div class="card-product__hidden-block_small"><button class="card-product__button">
+                        <div class="card-product__button-icon icon_cart"></div><span>Add to cart</span>
+                      </button></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-arrivals__dot">
-              <div class="carousel-arrivals__dot-item"></div>
-              <div class="carousel-arrivals__dot-item"></div>
-              <div class="carousel-arrivals__dot-item"></div>
-              <div class="carousel-arrivals__dot-item"></div>
-              <div class="carousel-arrivals__dot-item"></div>
-              <div class="carousel-arrivals__dot-item"></div>
-            </div>
+            <div class="swiper-pagination carousel-arrivals__pagination"></div>
           </div>
         </div>
       </section>
@@ -1061,29 +1064,29 @@
           <h2 class="title__h2">Popular categories</h2>
         </div>
         <div class="popular-categories__list">
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-tops.png" alt="Tops">
-              <p class="img-link__title undefined">Tops</p>
+              <p class="img-link__title _gray900">Tops</p>
             </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-tshirts.png" alt="T-shirts">
-              <p class="img-link__title undefined">T-shirts</p>
+              <p class="img-link__title _gray900">T-shirts</p>
             </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-caps.png" alt="Caps">
-              <p class="img-link__title undefined">Caps</p>
+              <p class="img-link__title _gray900">Caps</p>
             </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-sandals.png" alt="Sandals">
-              <p class="img-link__title undefined">Sandals</p>
+              <p class="img-link__title _gray900">Sandals</p>
             </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-jackets.png" alt="Jackets">
-              <p class="img-link__title undefined">Jackets</p>
+              <p class="img-link__title _gray900">Jackets</p>
             </a></div>
-          <div class="img-link"> <a class="img-link__link undefined" href="#"><img class="img-link__img"
+          <div class="img-link"> <a class="img-link__link _circle" href="#"><img class="img-link__img"
                 src="img/pc-coats.png" alt="Coats">
-              <p class="img-link__title undefined">Coats</p>
+              <p class="img-link__title _gray900">Coats</p>
             </a></div>
         </div>
       </section>
@@ -1097,7 +1100,7 @@
           <div class="carousel-trending">
             <div class="carousel-trending__carousel">
               <div class="carousel-trending__carousel-list">
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-shirt.png"></div>
                     <div class="card-product__rating">
@@ -1142,7 +1145,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-watch.png"></div>
                     <div class="card-product__rating">
@@ -1166,7 +1169,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-coat.png"></div>
                     <div class="card-product__chevron"><button
@@ -1204,7 +1207,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-shirt.png"></div>
                     <div class="card-product__rating">
@@ -1249,7 +1252,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-watch.png"></div>
                     <div class="card-product__rating">
@@ -1273,7 +1276,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-coat.png"></div>
                     <div class="card-product__chevron"><button
@@ -1311,7 +1314,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-shirt.png"></div>
                     <div class="card-product__rating">
@@ -1356,7 +1359,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-watch.png"></div>
                     <div class="card-product__rating">
@@ -1380,7 +1383,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/trending-coat.png"></div>
                     <div class="card-product__chevron"><button
@@ -1443,7 +1446,7 @@
           <div class="carousel-sale">
             <div class="carousel-sale__carousel">
               <div class="carousel-sale__carousel-list">
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-bag.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1485,7 +1488,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-jeans.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1506,7 +1509,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-boots.png"></div>
                     <div class="card-product__discount">-20%</div>
@@ -1548,7 +1551,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-bag.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1590,7 +1593,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-jeans.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1611,7 +1614,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-boots.png"></div>
                     <div class="card-product__discount">-20%</div>
@@ -1653,7 +1656,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-bag.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1695,7 +1698,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-jeans.png"></div>
                     <div class="card-product__discount">-50%</div>
@@ -1716,7 +1719,7 @@
                       </button></div>
                   </div>
                 </div>
-                <div class="card-product">
+                <div class="card-product card-product__large">
                   <div class="card-product__inner">
                     <div class="card-product__img_large"><img src="img/sale-boots.png"></div>
                     <div class="card-product__discount">-20%</div>
@@ -1993,15 +1996,13 @@
         </div>
       </section>
     </main>
-    <script src="js/header.720e575d.js"></script>
-    <script src="js/hero-slide.51b5bf93.js"> </script>
-    <script src="js/carousel-arrivals.c1114e2f.js"> </script>
+    <script src="js/hero-slide.e5ae2054.js"> </script>
+    <script src="js/carousel-arrivals.10ba6c9b.js"> </script>
     <script src="js/banner.4c8ee110.js"> </script>
     <script src="js/carousel-trending.633b918a.js"> </script>
     <script src="js/carousel-sale.da5f3298.js"> </script>
     <script src="js/card-product.a1bfada0.js"></script>
     <script src="js/subscribe.3a4dbb01.js"></script>
-    <script src="js/index.1.4261a70d.js"> </script>
     <div class="footer">
       <div class="footer__content">
         <div class="footer__content-col">
@@ -2076,5 +2077,9 @@
         </div>
       </div>
     </div>
+    <script src="js/header.720e575d.js"></script>
+    <script src="js/special-offers.f0cbcdac.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/index.1.4c70439d.js"></script>
   </body>
 </html>
