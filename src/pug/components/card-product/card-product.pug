@@ -1,5 +1,5 @@
 mixin card-product(obj)
-    .card-product
+    div(class=`card-product card-product__${obj.style}`)
         .card-product__inner
             div(class=`card-product__img_${obj.style}`)
                 img(src=require(obj.img))

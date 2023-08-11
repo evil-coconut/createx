@@ -1,42 +1,24 @@
 @import '../card-product/card-product.scss';
 
 .carousel-arrivals {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    &__list {
+    width: 1900px;
+    margin: 0 auto;
+    &__wrapper, .swiper-wrapper {
         width: 1900px;
-        height: 450px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        scroll-snap-type: both mandatory;
-        column-gap: 30px;
-        overflow: hidden;
-        padding: 0 20px;
-        @media (min-width: 1615px) and (max-width: 1899px) {width: 1615px; padding: 0 40px;}
-        @media (min-width: 1330px) and (max-width: 1614px) {width: 1330px; padding: 0 70px;}
-        @media (min-width: 1045px) and (max-width: 1329px) {width: 1045px; padding: 0 100px;}
-    
+        height: 500px;
     }
-    &__dot {
-        width: 240px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 40px 0 0 0;
+    &__slide {
+        width: 285px;
     }
-    &__dot-item {
+    &__pagination .swiper-pagination-bullet {
         width: 30px;
         height: 3px;
-        background-color: $gray-500;
         border-radius: 3px;
+        background: #424551;
     }
-    &__dot-item_active {
-        background-color: $gray-800;
-    }
-}
-.carousel-arrivals-active {
-    scroll-snap-type: unset;
+    @media (min-width: 1545px) and (max-width: 1859px) {width: 1545px;}
+    @media (min-width: 1230px) and (max-width: 1544px) {width: 1230px;}
+    @media (min-width: 915px) and (max-width: 1229px) {width: 915px;}
+    @media (min-width: 600px) and (max-width: 914px) {width: 600px;}
+    @media (min-width: 320px) and (max-width: 599px) {width: 300px;}
 }

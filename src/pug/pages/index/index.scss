@@ -16,7 +16,6 @@ body {
 .main-slide {
     max-width: 1920px;
     position: relative;
-    margin: auto auto 556px auto;
     //&__hero-slide {}
     &__top-categories {
         position: absolute;
@@ -48,10 +47,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 556px auto auto auto;
     &__text {
         font-size: $FS-large;
         line-height: 150%;
         margin: 24px 0 0 0;
+        text-align: center;
     }
     &__link {
         color: $primary;
@@ -61,10 +62,16 @@ body {
     &__carousel {
         margin: 65px 0 180px 0;
     }
+    @media (min-width: 827px) and (max-width: 1247px) {
+        margin: 900px auto auto auto;
+    }
+    @media (min-width: 320px) and (max-width: 826px) {
+        margin: 1390px auto auto auto;
+    }
 }
 
 .banners {
-    display: flex;
+    display: none; // display flex
     row-gap: 13px;
     column-gap: 16px;
     flex-wrap: wrap;
@@ -73,7 +80,7 @@ body {
 }
 
 .popular-categories {
-    display: flex;
+    display: none; // display flex
     flex-direction: column;
     align-items: center;
     margin: 180px 0;
@@ -87,6 +94,7 @@ body {
 }
 
 .trending-now {
+    display: none;
     height: 950px;
     background-color: $gray-300;
     padding: 80px 0;
@@ -111,6 +119,7 @@ body {
 }
 
 .sale {
+    display: none;
     height: 950px;
     background-color: $white;
     padding: 100px 0 150px 0;
@@ -135,6 +144,7 @@ body {
 }
 
 .mobile-app {
+    display: none;
     height: 330px;
     background-color: $gray-900;
     position: relative;
@@ -173,7 +183,7 @@ body {
 }
 
 .services {
-    display: flex;
+    display: none; //display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 45px;
@@ -187,7 +197,7 @@ body {
 
 .insta-block {
     max-width: 1230px;
-    display: flex;
+    display: none; //display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
@@ -223,6 +233,7 @@ body {
 }
 
 .fashion-block {
+    display: none;
     max-width: 1230px;
     margin: 180px auto 0 auto;
     &__inner {
@@ -244,9 +255,13 @@ body {
 
 .brands {
     max-width: 1230px;
-    display: flex;
+    display: none; //display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 120px auto;
+}
+
+.subscribe-for-updates {
+    display: none;
 }

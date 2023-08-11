@@ -1,4 +1,11 @@
 .card-product {
+    position: relative;
+    &__large {
+        width: 390px;
+    }
+    &__small {
+        width: 285px;
+    }
     &__inner {
         position: relative;
     }
