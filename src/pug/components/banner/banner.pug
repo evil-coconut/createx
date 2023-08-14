@@ -20,8 +20,7 @@ mixin banner(obj)
                     })
                 .banner__input-text *Sign up to be the first to hear about exclusive deals, special offers and upcoming collections.
         else
-            .banner__img 
-                img(src=require(`../../../img/${obj.img}.png`))
+            img.banner__img(src=require(`../../../img/${obj.img}.png`))
             .banner__inner
                 .banner__top-title=obj.topTitle
                 .banner__title=obj.title 

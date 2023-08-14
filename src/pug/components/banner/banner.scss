@@ -3,7 +3,9 @@
 
 .banner {
     position: relative;
-    &__img {}
+    &__img{
+        max-width: 100%;
+    }
     &__inner {
         position: absolute;
         top: 60px;
@@ -113,5 +115,41 @@
     }
     #limited-countdown {
         display: none;
+    }
+    @media (min-width: 320px) and (max-width: 1000px) {
+        &__title {
+            margin: 12px 0 20px 0;
+        }
+        &__limited {
+            margin: 20px 0 0 0;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 820px) {
+        &__inner {
+            top: 20px;
+            left: 30px;
+        }
+        &__title {
+            width: 250px;
+            font-size: 20px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 660px) {
+        &__img {
+            max-width: none;
+            height: 280px;
+        }
+        &__input-text {
+            width: 300px;
+        }
+        &__input {
+            width: 220px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 775px) {
+        &__inner-input {
+            width: 100%;
+            padding: 20px 0 0 20px;
+        }
     }
 }
