@@ -23,4 +23,9 @@
         letter-spacing: 1px;
         text-transform: uppercase;
     }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__h2 {
+            font-size: 36px;
+        }
+    }
 }

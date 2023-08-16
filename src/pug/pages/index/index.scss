@@ -108,12 +108,14 @@ body {
     height: 950px;
     background-color: $gray-300;
     padding: 80px 0;
-    position: relative;
-    &__title {
-        padding: 0 345px;
+    &__wrapper {
+        max-width: 1230px;
+        position: relative;
+        margin: 0 auto;
     }
+    &__title {}
     &__carousel {
-        margin: 60px 0 80px 0;
+        margin: 60px 0 0 0;
     }
     &__link {
         display: flex;
@@ -121,10 +123,22 @@ body {
         justify-content: center;
         align-items: center;
         height: 52px;
-        position: absolute;
-        top: 818px;
-        left: 855px;
         z-index: 0;
+    }
+    @media (min-width: 410px) and (max-width: 830px) {
+        &__wrapper {
+            width: 420px;
+        }
+    }
+    @media (min-width: 831px) and (max-width: 1220px) {
+        &__wrapper {
+            width: 810px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__title {
+            text-align: center;
+        }
     }
 }
 
@@ -132,12 +146,14 @@ body {
     height: 950px;
     background-color: $white;
     padding: 100px 0 150px 0;
-    position: relative;
-    &__title {
-        padding: 0 345px;
+    &__wrapper {
+        max-width: 1230px;
+        position: relative;
+        margin: 0 auto;
     }
+    &__title {}
     &__carousel {
-        margin: 60px 0 80px 0;
+        margin: 60px 0 0 0;
     }
     &__link {
         display: flex;
@@ -145,10 +161,22 @@ body {
         justify-content: center;
         align-items: center;
         height: 52px;
-        position: absolute;
-        top: 818px;
-        left: 855px;
         z-index: 0;
+    }
+    @media (min-width: 410px) and (max-width: 830px) {
+        &__wrapper {
+            width: 420px;
+        }
+    }
+    @media (min-width: 831px) and (max-width: 1220px) {
+        &__wrapper {
+            width: 810px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__title {
+            text-align: center;
+        }
     }
 }
 

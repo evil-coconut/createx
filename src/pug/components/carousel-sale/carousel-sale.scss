@@ -3,15 +3,13 @@
 .carousel-sale {
     position: relative;
     &__carousel {
-        width: 1230px;
-        height: 710px;
+        height: 646px;
         overflow: hidden;
         margin: 0 auto;
     }
     &__carousel-list {
-        width: 3750px;
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        display: flex;
+        flex-direction: row;
         gap: 30px;
         position: relative;
         left: 0;
@@ -20,7 +18,7 @@
     &__button {
         position: absolute;
         top: -100px;
-        right: 333px;
+        right: 0px;
         display: flex;
         flex-direction: row;
     }
@@ -37,5 +35,15 @@
         background-color: $primary;
         border-radius: 50%;
         cursor: pointer;
+    }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__carousel {
+            height: 546px;
+        }
+        &__button {
+            width: 100%;
+            top: -50px;
+            justify-content: space-between;
+        }
     }
 }

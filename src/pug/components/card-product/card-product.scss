@@ -9,11 +9,11 @@
     &__inner {
         position: relative;
     }
-    &__img_large > div {
+    &__img_large > img {
         width: 390px;
         height: 440px;
     }
-    &__img_small > div {
+    &__img_small > img {
         width: 285px;
         height: 320px;
     }
@@ -250,6 +250,24 @@
         line-height: 36px;
         letter-spacing: 0.5px;
         cursor: pointer;
+    }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__large {
+            width: 285px;
+        }
+        &__img_large > img {
+            width: 285px;
+            height: 320px;
+        }
+        &__price_large {
+            font-size: 20px;
+        }
+        &__old-price_large {
+            font-size: 16px;
+        }
+        &__hidden-block_large {
+            width: 285px;
+        }
     }
 }
 .card-product:hover .card-product__hidden-block_large {display: block; box-shadow: $shadow-regular;}
