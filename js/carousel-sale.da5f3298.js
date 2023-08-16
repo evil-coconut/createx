@@ -1,1 +1,0 @@
-(()=>{const e=document.querySelector(".carousel-sale__button-next"),t=document.querySelector(".carousel-sale__button-prev"),l=document.querySelector(".carousel-sale__carousel-list");let c=0;e.addEventListener("click",(function(){c+=1260,c>2520&&(c=0),l.style.left=-c+"px"})),t.addEventListener("click",(function(){c-=1260,c<0&&(c=2520),l.style.left=-c+"px"}))})();
