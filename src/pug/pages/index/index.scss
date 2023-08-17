@@ -182,24 +182,20 @@ body {
 
 .mobile-app {
     height: 330px;
-    background-color: $gray-900;
     position: relative;
-    &__block-white {
-        height: 30px;
-        background-color: $white;
-    }
-    &__img {
-        position: absolute;
-        top: 0;
-        left: 317px;
-    }
-    &__inner {
+    &__container {
         max-width: 1230px;
-        padding: 60px 0 0 650px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         margin: 0 auto;
     }
+    &__img {}
+    &__inner {
+        max-width: 600px;
+    }
     &__title {
-        width: 600px;
         color: $white;
         font-size: 32px;
         font-family: $mainFont;
@@ -211,23 +207,69 @@ body {
     &__button {
         display: flex;
         flex-direction: row;
+        gap: 24px;
     }
-    &__app-store {
-        margin-right: 24px;
-    }
+    &__app-store {}
     &__google-play {}
+    @media (min-width: 320px) and (max-width: 880px) {
+        padding: 50px 0;
+        &__button {
+            flex-direction: column;
+            gap: 0;
+        }
+        &__img img {
+            width: 100%;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 650px) {
+        &__img {
+            display: none;
+        }
+        &__inner {
+            margin: 0 auto;
+        }
+    }
+}
+.mobile-app::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: $gray-900;
+    z-index: -1;
 }
 
 .services {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 45px;
     margin: 120px 0 180px 0;
     &__divider {
         width: 1px;
         height: 136px;
         background: $divider-gradient;
+    }
+    @media (min-width: 320px) and (max-width: 589px) {
+        &__divider {
+            display: none;
+        }
+    }
+}
+@media (min-width: 871px) and (max-width: 1170px) {
+    .services .services__divider:nth-child(6) {
+        display: none;
+    }
+}
+@media (min-width: 590px) and (max-width: 870px) {
+    .services .services__divider:nth-child(4) {
+        display: none;
+    }
+    .services .services__divider:nth-child(6) {
+        display: block;
     }
 }
 
@@ -236,6 +278,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     margin: 0 auto;
     &__inner {
         display: flex;
@@ -264,7 +308,18 @@ body {
     &__img {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
+    }
+    @media (min-width: 320px) and (max-width: 1161px) {
+        justify-content: center;
+
+    }
+    @media (min-width: 320px) and (max-width: 420px) {
+        &__inner_title {
+            font-size: 36px;
+        }
     }
 }
 

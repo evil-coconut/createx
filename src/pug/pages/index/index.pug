@@ -143,17 +143,17 @@ block content
                         'style': 'empty',
                         'size': 'large',
                     })
-        section.mobile-app 
-            .mobile-app__block-white
-            .mobile-app__img 
-                img(src=require("../../../img/mobile-app.svg"), alt="")
-            .mobile-app__inner
-                .mobile-app__title Enjoy mobile shopping with our Createx Store App!
-                .mobile-app__button 
-                    a.mobile-app__app-store(href="#")
-                        img(src=require("../../../img/app-store.svg"), alt="")
-                    a.mobile-app__google-play(href="#")  
-                        img(src=require("../../../img/google-play.svg"), alt="")
+        section.mobile-app
+            .mobile-app__container 
+                .mobile-app__img
+                    img(src=require("../../../img/mobile-app.svg"), alt="")
+                .mobile-app__inner
+                    .mobile-app__title Enjoy mobile shopping with our Createx Store App!
+                    .mobile-app__button 
+                        a.mobile-app__app-store(href="#")
+                            img(src=require("../../../img/app-store.svg"), alt="")
+                        a.mobile-app__google-play(href="#")  
+                            img(src=require("../../../img/google-play.svg"), alt="")
         section.services
             +icon-box({
                 'img': 'ic-delivery.svg',
