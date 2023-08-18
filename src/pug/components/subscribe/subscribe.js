@@ -1,10 +1,10 @@
-const sexElems = document.querySelector('.subscribe__info_sex').children;
+const peopleElems = document.querySelector('.subscribe__info_people').children;
 let itemsToSend = [];
 
-for(let i = 0; i < sexElems.length; i++) {
-    sexElems[i].addEventListener('click', () => {
-        sexElems[i].classList.toggle('subscribe__info_sex-active'); 
-        let elemAtr = sexElems[i].innerHTML;
+for(let i = 0; i < peopleElems.length; i++) {
+    peopleElems[i].addEventListener('click', () => {
+        peopleElems[i].classList.toggle('subscribe__info_people-active'); 
+        let elemAtr = peopleElems[i].innerHTML;
         selectButton(elemAtr);
     })
 }

@@ -330,6 +330,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        gap: 5px;
         margin: 0 0 60px 0;
     }
     &__inner_title {}
@@ -340,6 +342,8 @@ body {
         display: flex;
         flex-direction: row;
         gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -349,6 +353,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: 120px auto;
 }
 

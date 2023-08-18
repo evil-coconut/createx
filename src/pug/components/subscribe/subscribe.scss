@@ -9,6 +9,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0 auto;
+        padding: 0 10px;
     }
     &__info {
         display: flex;
@@ -30,12 +31,12 @@
         line-height: 150%;
         margin: 24px 0 32px 0;
     }
-    &__info_sex {
+    &__info_people {
         display: flex;
         flex-direction: row;
         gap: 12px;
     }
-    &__info_sex-woman, &__info_sex-men, &__info_sex-girl, &__info_sex-boy {
+    &__info_people-woman, &__info_people-men, &__info_people-girl, &__info_people-boy {
         color: $gray-700;
         font-size: 14px;
         font-style: normal;
@@ -48,13 +49,13 @@
         cursor: pointer;
         transition: all 0.3s;
     }
-    &__info_sex-woman:hover, &__info_sex-men:hover, &__info_sex-girl:hover, &__info_sex-boy:hover {
+    &__info_people-woman:hover, &__info_people-men:hover, &__info_people-girl:hover, &__info_people-boy:hover {
         color: $white;
         background-color: $primary;
         border: 1px solid $gray-200;
         transition: all 0.3s;
     }
-    &__info_sex-active {
+    &__info_people-active {
         color: $white;
         background-color: $primary;
         border: 1px solid $gray-200;
@@ -93,4 +94,34 @@
         margin: 0 0 0 12px;
     }
     &__img {}
+    @media (min-width: 320px) and (max-width: 975px) {
+        &__img {
+            display: none;
+        }
+        &__content {
+            justify-content: center;
+        }
+    }
+    @media (min-width: 420px) and (max-width: 520px) {
+        &__info_email {
+            width: 300px;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 419px) {
+        &__info_title {
+            font-size: 36px;
+        }
+        &__info_email {
+            width: 250px;
+        }
+        &__info_people {
+            gap: 10px;
+        }
+        &__info_checkbox-label {
+            font-size: 13px;
+        }
+        &__info_checkbox-text {
+            margin: 0 0 0 7px;
+        }
+    }
 }
